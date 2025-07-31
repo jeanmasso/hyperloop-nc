@@ -1,0 +1,37 @@
+[
+  {
+    "id": "GT-NK",
+    "name": "Grande-Terre : Nouméa - Koumac",
+    "description_fr": "Ligne principale reliant le sud au nord de la Grande-Terre.",
+    "description_en": "Main line connecting the south to the north of Grande-Terre.",
+    "station_ids": ["noumea", "boulouparis", "la-foa", "bourail", "koné", "koumac"]
+  },
+  {
+    "id": "GT-LIFOU",
+    "name": "Ligne Grande-Terre - Lifou",
+    "description_fr": "Liaison depuis la Grande-Terre vers l'île de Lifou.",
+    "description_en": "Connection from Grande-Terre to Lifou Island.",
+    "station_ids": ["noumea", "lifou-we"]
+  },
+  {
+    "id": "GT-MARE",
+    "name": "Ligne Grande-Terre - Maré",
+    "description_fr": "Liaison depuis la Grande-Terre vers l'île de Maré.",
+    "description_en": "Connection from Grande-Terre to Maré Island.",
+    "station_ids": ["noumea", "mare-tadine"]
+  },
+  {
+    "id": "GT-OUVEA",
+    "name": "Ligne Grande-Terre - Ouvéa",
+    "description_fr": "Liaison depuis la Grande-Terre vers l'île d'Ouvéa.",
+    "description_en": "Connection from Grande-Terre to Ouvéa Island.",
+    "station_ids": ["noumea", "ouvea-fayaoue"]
+  },
+  {
+    "id": "GT-ILE-DES-PINS",
+    "name": "Ligne Grande-Terre - Île des Pins",
+    "description_fr": "Liaison depuis la Grande-Terre vers l'Île des Pins.",
+    "description_en": "Connection from Grande-Terre to Île des Pins.",
+    "station_ids": ["noumea", "ile-des-pins-kunie"]
+  }
+]
