@@ -1,0 +1,832 @@
+/* Conteneur principal */
+.prices-container {
+  min-height: 100vh;
+  background: white;
+  padding: 2rem 1rem;
+}
+
+/* Header */
+.prices-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.prices-header h1.display-4 {
+  color: #333 !important;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.prices-header .lead {
+  color: #6c757d !important;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.loading-spinner {
+  font-size: 4rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Section des contrôles */
+.controls-section {
+  margin-bottom: 2rem;
+}
+
+/* Section de présentation des classes */
+.service-classes-section {
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.section-description {
+  color: #6c757d;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* Grille des classes */
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Cartes des classes */
+.class-card {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 15px;
+  padding: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.class-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+.class-card.active {
+  border-color: #667eea;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.2);
+}
+
+/* Conteneur d'image des classes */
+.class-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.class-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.class-card:hover .class-image {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.class-card:hover .image-overlay {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.05));
+}
+
+.image-overlay .class-icon {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: pulse 2s infinite;
+  margin-right: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* En-tête des cartes de classe */
+.class-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1.5rem 1.5rem 0;
+}
+
+.class-icon {
+  font-size: 2rem;
+  margin-right: 0.75rem;
+}
+
+.class-title {
+  flex: 1;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #495057;
+  min-width: 150px;
+}
+
+.class-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.premium-badge {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4a 100%);
+  color: #8b6914;
+}
+
+.standard-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.economy-badge {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+}
+
+/* Caractéristiques des classes */
+.class-features {
+  margin-bottom: 1.5rem;
+  padding: 0 1.5rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  color: #495057;
+  font-size: 0.95rem;
+}
+
+.feature-icon {
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+  width: 1.5rem;
+  text-align: center;
+}
+
+/* Tarification des classes */
+.class-pricing {
+  text-align: center;
+  padding: 1rem 1.5rem 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  margin: 0 1.5rem 1.5rem;
+}
+
+.price-label {
+  display: block;
+  color: #6c757d;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.price-range {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+/* Indicateur de sélection */
+.selection-indicator {
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.selected-class-info {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #495057;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.current-icon {
+  font-size: 1.3rem;
+}
+
+/* Styles spécifiques par classe */
+.class-card.premium .class-icon {
+  color: #ffd700;
+}
+
+.class-card.standard .class-icon {
+  color: #667eea;
+}
+
+.class-card.economy .class-icon {
+  color: #28a745;
+}
+
+.class-card.premium.active {
+  border-color: #ffd700;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(255, 237, 74, 0.05) 100%);
+}
+
+.class-card.economy.active {
+  border-color: #28a745;
+  background: linear-gradient(135deg, rgba(40, 167, 69, 0.05) 0%, rgba(32, 201, 151, 0.05) 100%);
+}
+
+/* Section de filtrage par localisation */
+.location-filter-section {
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.location-filter-section .section-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.location-filter-section .section-header h3 {
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.location-filter-section .section-description {
+  color: #6c757d;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* Onglets de localisation */
+.location-tabs-container {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e9ecef;
+}
+
+.location-tabs-header {
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.location-tab-button {
+  background: white !important;
+  border: 2px solid #e9ecef !important;
+  color: #6c757d !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  min-width: 140px;
+  justify-content: center;
+}
+
+.location-tab-button:hover {
+  border-color: #667eea !important;
+  color: #667eea !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+}
+
+.location-tab-button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-color: transparent !important;
+  color: white !important;
+  box-shadow: 0 3px 12px rgba(102, 126, 234, 0.25);
+}
+
+.location-tab-button .tab-icon {
+  font-size: 1.1rem;
+}
+
+.location-tab-button .tab-label {
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.location-tab-button .tab-count {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Filtres */
+.filters-container {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e9ecef;
+}
+
+.filters-header h3 {
+  color: #495057;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #495057;
+}
+
+.form-select {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 0.75rem;
+}
+
+.form-select:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25) !important;
+}
+
+/* Onglets */
+.tabs-container {
+  margin-bottom: 2rem;
+}
+
+.tabs-header {
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tab-button {
+  background: white !important;
+  border: 2px solid #e9ecef !important;
+  color: #6c757d !important;
+  padding: 1rem 1.5rem !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.tab-button:hover {
+  border-color: #667eea !important;
+  color: #667eea !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.tab-button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-color: transparent !important;
+  color: white !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.tab-icon {
+  font-size: 1.2rem;
+}
+
+.tab-label {
+  font-size: 0.95rem;
+}
+
+/* Liste des tarifs */
+.prices-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.prices-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Cartes de tarifs */
+.price-card {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.price-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+  transform: translateY(-2px);
+}
+
+.price-card.expanded {
+  border-color: #667eea;
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.15);
+}
+
+/* En-tête de la carte */
+.price-header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.route-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.stations {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.origin-station, .destination-station {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.station-icon {
+  font-size: 1.1rem;
+  color: #667eea;
+}
+
+.station-name {
+  font-weight: 600;
+  color: #495057;
+}
+
+.route-arrow {
+  font-size: 1.2rem;
+  color: #6c757d;
+  font-weight: bold;
+}
+
+.route-details {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.distance {
+  background: #e9ecef;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.price-info {
+  text-align: right;
+}
+
+.current-price {
+  margin-bottom: 0.25rem;
+}
+
+.price-amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #667eea;
+  display: block;
+}
+
+.price-class {
+  font-size: 0.85rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.price-per-km {
+  font-size: 0.8rem;
+  color: #28a745;
+}
+
+/* Détails du tarif */
+.price-details {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid #e9ecef;
+  background: #f8f9fa;
+}
+
+.details-section {
+  margin-bottom: 1.5rem;
+}
+
+.details-section:last-child {
+  margin-bottom: 0;
+}
+
+.details-section h5 {
+  color: #495057;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Répartition des prix */
+.prices-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.price-class-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.class-icon {
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}
+
+.class-name {
+  flex: 1;
+  font-weight: 500;
+  color: #495057;
+}
+
+.class-price {
+  font-weight: bold;
+  color: #667eea;
+}
+
+/* Statistiques de route */
+.route-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.stat-label {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  font-weight: 600;
+  color: #495057;
+}
+
+/* Informations des îles */
+.islands-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.island-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.island-badge.origin {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.island-badge.destination {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.islands-info .arrow {
+  color: #6c757d;
+  font-weight: bold;
+}
+
+/* Message aucun résultat */
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #6c757d;
+}
+
+.no-results-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.no-results h3 {
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+.no-results p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .prices-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  /* Classes section responsive */
+  .classes-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .class-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .class-title {
+    min-width: auto;
+    width: 100%;
+  }
+  
+  .class-badge {
+    align-self: flex-start;
+  }
+  
+  .features-list li {
+    font-size: 0.9rem;
+  }
+  
+  .selected-class-info {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+  }
+  
+  /* Location filter responsive */
+  .location-tabs-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .location-tab-button {
+    width: 100% !important;
+    min-width: auto !important;
+    justify-content: space-between !important;
+    padding: 1rem !important;
+  }
+  
+  .location-filter-section .section-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* Existing responsive styles */
+  .price-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .price-info {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .stations {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .route-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .tabs-header {
+    flex-direction: column;
+  }
+  
+  .tab-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .filters-content .row {
+    flex-direction: column;
+  }
+  
+  .prices-breakdown {
+    gap: 0.5rem;
+  }
+  
+  .route-stats {
+    flex-direction: column;
+  }
+  
+  .islands-info {
+    justify-content: center;
+  }
+}

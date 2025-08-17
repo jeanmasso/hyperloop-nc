@@ -1,0 +1,130 @@
+[
+  {
+    "id": "noumea",
+    "name_fr": "Nouméa",
+    "name_en": "Noumea",
+    "island_fr": "Grande-Terre",
+    "island_en": "Grande-Terre",
+    "coordinates": {"lat": -22.2758, "lon": 166.458}
+  },
+  {
+    "id": "paita",
+    "name_fr": "Païta",
+    "name_en": "Païta",
+    "island_fr": "Grande-Terre",
+    "island_en": "Grande-Terre",
+    "coordinates": {"lat": -22.126, "lon": 166.29}
+  },
+  {
+    "id": "tontouta",
+    "name_fr": "Tontouta",
+    "name_en": "Tontouta",
+    "island_fr": "Grande-Terre",
+    "island_en": "Grande-Terre",
+    "coordinates": {"lat": -22.022, "lon": 166.195}
+  },
+  {
+    "id": "boulouparis",
+    "name_fr": "Boulouparis",
+    "name_en": "Boulouparis",
+    "island_fr": "Grande-Terre",
+    "island_en": "Grande-Terre",
+    "coordinates": {"lat": -21.95, "lon": 165.9}
+  },
+  {
+    "id": "la-foa",
+    "name_fr": "La Foa",
+    "name_en": "La Foa",
+    "island_fr": "Grande-Terre",
+    "island_en": "Grande-Terre",
+    "coordinates": {"lat": -21.72, "lon": 165.82}
+  },
+  {
+    "id": "moindou",
+    "name_fr": "Moindou",
+    "name_en": "Moindou",
+    "island_fr": "Grande-Terre",
+    "island_en": "Grande-Terre",
+    "coordinates": {"lat": -21.65, "lon": 165.65}
+  },
+  {
+    "id": "bourail",
+    "name_fr": "Bourail",
+    "name_en": "Bourail",
+    "island_fr": "Grande-Terre",
+    "island_en": "Grande-Terre",
+    "coordinates": {"lat": -21.57, "lon": 165.48}
+  },
+  {
+    "id": "poya",
+    "name_fr": "Poya",
+    "name_en": "Poya",
+    "island_fr": "Grande-Terre",
+    "island_en": "Grande-Terre",
+    "coordinates": {"lat": -21.36, "lon": 165.15}
+  },
+  {
+    "id": "koné",
+    "name_fr": "Koné",
+    "name_en": "Koné",
+    "island_fr": "Grande-Terre",
+    "island_en": "Grande-Terre",
+    "coordinates": {"lat": -21.05, "lon": 164.85}
+  },
+  {
+    "id": "voh",
+    "name_fr": "Voh",
+    "name_en": "Voh",
+    "island_fr": "Grande-Terre",
+    "island_en": "Grande-Terre",
+    "coordinates": {"lat": -20.93, "lon": 164.7}
+  },
+  {
+    "id": "kaala-gomen",
+    "name_fr": "Kaala-Gomen",
+    "name_en": "Kaala-Gomen",
+    "island_fr": "Grande-Terre",
+    "island_en": "Grande-Terre",
+    "coordinates": {"lat": -20.73, "lon": 164.44}
+  },
+  {
+    "id": "koumac",
+    "name_fr": "Koumac",
+    "name_en": "Koumac",
+    "island_fr": "Grande-Terre",
+    "island_en": "Grande-Terre",
+    "coordinates": {"lat": -20.56, "lon": 164.28}
+  },
+  {
+    "id": "lifou-we",
+    "name_fr": "Wé (Lifou)",
+    "name_en": "Wé (Lifou)",
+    "island_fr": "Lifou",
+    "island_en": "Lifou",
+    "coordinates": {"lat": -20.93, "lon": 167.24}
+  },
+  {
+    "id": "mare-tadine",
+    "name_fr": "Tadine (Maré)",
+    "name_en": "Tadine (Maré)",
+    "island_fr": "Maré",
+    "island_en": "Maré",
+    "coordinates": {"lat": -21.66, "lon": 167.97}
+  },
+  {
+    "id": "ouvea-fayaoue",
+    "name_fr": "Fayaoué (Ouvéa)",
+    "name_en": "Fayaoué (Ouvéa)",
+    "island_fr": "Ouvéa",
+    "island_en": "Ouvéa",
+    "coordinates": {"lat": -20.65, "lon": 166.57}
+  },
+  {
+    "id": "ile-des-pins-kunie",
+    "name_fr": "Kunié (Île des Pins)",
+    "name_en": "Kunié (Île des Pins)",
+    "island_fr": "Île des Pins",
+    "island_en": "Isle of Pines",
+    "coordinates": {"lat": -22.61, "lon": 167.45}
+  }
+]

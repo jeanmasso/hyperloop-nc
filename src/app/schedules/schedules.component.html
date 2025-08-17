@@ -1,0 +1,290 @@
+<div class="schedules-container">
+  <div class="schedules-header">
+    <h1 class="display-4">🕐 Horaires des Trains</h1>
+    <p class="lead">Consultez tous les horaires de départ et d'arrivée pour planifier votre voyage en Nouvelle-Calédonie</p>
+  </div>
+
+  <!-- Loading -->
+  <div *ngIf="loading" class="loading-container">
+    <div class="loading-spinner">🚄</div>
+    <p>Chargement des horaires...</p>
+  </div>
+
+  <!-- Onglets -->
+  <div *ngIf="!loading" class="tabs-container">
+    <div class="tabs-header">
+      <button 
+        class="tab-button"
+        [class.active]="activeTab === 'south'"
+        (click)="switchTab('south')"
+      >
+        <span class="tab-icon">⬇️</span>
+        <span class="tab-label">Vers le Sud</span>
+        <span class="tab-count">({{ schedulesByDirection.south.length }})</span>
+      </button>
+      
+      <button 
+        class="tab-button"
+        [class.active]="activeTab === 'north'"
+        (click)="switchTab('north')"
+      >
+        <span class="tab-icon">⬆️</span>
+        <span class="tab-label">Vers le Nord</span>
+        <span class="tab-count">({{ schedulesByDirection.north.length }})</span>
+      </button>
+      
+      <button 
+        class="tab-button"
+        [class.active]="activeTab === 'islands'"
+        (click)="switchTab('islands')"
+      >
+        <span class="tab-icon">🏝️</span>
+        <span class="tab-label">Vers les Îles</span>
+        <span class="tab-count">({{ schedulesByDirection.islands.length }})</span>
+      </button>
+    </div>
+
+    <!-- Contenu des onglets -->
+    <div class="tabs-content">
+      <!-- Onglet Sud -->
+      <div *ngIf="activeTab === 'south'" class="tab-panel">
+        <div class="schedules-list">
+          <div 
+            *ngFor="let scheduleDisplay of schedulesByDirection.south; trackBy: trackBySchedule" 
+            class="schedule-card"
+            (click)="toggleTripDetails(scheduleDisplay.schedule.trip_id)"
+            [class.expanded]="isExpanded(scheduleDisplay.schedule.trip_id)"
+          >
+            <div class="schedule-header">
+              <div class="schedule-title">
+                <h4>{{ scheduleDisplay.line.name }}</h4>
+                <div class="schedule-meta">
+                  <span class="trip-id">{{ scheduleDisplay.schedule.trip_id }}</span>
+                  <span class="duration">
+                    ⏱️ {{ getTripDuration(scheduleDisplay.schedule) }}
+                  </span>
+                </div>
+              </div>
+              <div class="schedule-description">
+                {{ scheduleDisplay.schedule.description_fr }}
+              </div>
+            </div>
+
+            <!-- Détails de la timeline - visible seulement si développé -->
+            <div 
+              class="schedule-timeline"
+              [class.hidden]="!isExpanded(scheduleDisplay.schedule.trip_id)"
+            >
+              <div class="timeline-header">
+                <span>Station</span>
+                <span>Horaire</span>
+              </div>
+              
+              <div class="timeline-content">
+                <div 
+                  *ngFor="let station of scheduleDisplay.stations; let i = index; trackBy: trackByStation"
+                  class="timeline-stop"
+                  [class.has-stop]="hasStopAtStation(scheduleDisplay.schedule, station.id)"
+                  [class.no-stop]="!hasStopAtStation(scheduleDisplay.schedule, station.id)"
+                >
+                  <div class="stop-station">
+                    <div class="stop-dot" [class.active]="hasStopAtStation(scheduleDisplay.schedule, station.id)"></div>
+                    <div class="station-info">
+                      <span class="station-name">{{ station.name_fr }}</span>
+                      <span class="station-island">
+                        {{ utilsService.getIslandIcon(station.island_fr) }} {{ station.island_fr }}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div class="stop-time">
+                    <span 
+                      class="time" 
+                      [class.no-stop-time]="!hasStopAtStation(scheduleDisplay.schedule, station.id)"
+                    >
+                      {{ hasStopAtStation(scheduleDisplay.schedule, station.id) 
+                         ? utilsService.formatTime(getStopTime(scheduleDisplay.schedule, station.id))
+                         : '---' }}
+                    </span>
+                  </div>
+                  
+                  <div 
+                    *ngIf="i < scheduleDisplay.stations.length - 1" 
+                    class="timeline-connector"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message si aucun résultat pour Sud -->
+          <div *ngIf="schedulesByDirection.south.length === 0" class="no-results">
+            <div class="no-results-icon">⬇️</div>
+            <h3>Aucun horaire vers le Sud</h3>
+            <p>Aucun train ne va vers le Sud.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Onglet Nord -->
+      <div *ngIf="activeTab === 'north'" class="tab-panel">
+        <div class="schedules-list">
+          <div 
+            *ngFor="let scheduleDisplay of schedulesByDirection.north; trackBy: trackBySchedule" 
+            class="schedule-card"
+            (click)="toggleTripDetails(scheduleDisplay.schedule.trip_id)"
+            [class.expanded]="isExpanded(scheduleDisplay.schedule.trip_id)"
+          >
+            <div class="schedule-header">
+              <div class="schedule-title">
+                <h4>{{ scheduleDisplay.line.name }}</h4>
+                <div class="schedule-meta">
+                  <span class="trip-id">{{ scheduleDisplay.schedule.trip_id }}</span>
+                  <span class="duration">
+                    ⏱️ {{ getTripDuration(scheduleDisplay.schedule) }}
+                  </span>
+                </div>
+              </div>
+              <div class="schedule-description">
+                {{ scheduleDisplay.schedule.description_fr }}
+              </div>
+            </div>
+
+            <!-- Détails de la timeline - visible seulement si développé -->
+            <div 
+              class="schedule-timeline"
+              [class.hidden]="!isExpanded(scheduleDisplay.schedule.trip_id)"
+            >
+              <div class="timeline-header">
+                <span>Station</span>
+                <span>Horaire</span>
+              </div>
+              
+              <div class="timeline-content">
+                <div 
+                  *ngFor="let station of scheduleDisplay.stations; let i = index; trackBy: trackByStation"
+                  class="timeline-stop"
+                  [class.has-stop]="hasStopAtStation(scheduleDisplay.schedule, station.id)"
+                  [class.no-stop]="!hasStopAtStation(scheduleDisplay.schedule, station.id)"
+                >
+                  <div class="stop-station">
+                    <div class="stop-dot" [class.active]="hasStopAtStation(scheduleDisplay.schedule, station.id)"></div>
+                    <div class="station-info">
+                      <span class="station-name">{{ station.name_fr }}</span>
+                      <span class="station-island">
+                        {{ utilsService.getIslandIcon(station.island_fr) }} {{ station.island_fr }}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div class="stop-time">
+                    <span 
+                      class="time" 
+                      [class.no-stop-time]="!hasStopAtStation(scheduleDisplay.schedule, station.id)"
+                    >
+                      {{ hasStopAtStation(scheduleDisplay.schedule, station.id) 
+                         ? utilsService.formatTime(getStopTime(scheduleDisplay.schedule, station.id))
+                         : '---' }}
+                    </span>
+                  </div>
+                  
+                  <div 
+                    *ngIf="i < scheduleDisplay.stations.length - 1" 
+                    class="timeline-connector"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message si aucun résultat pour Nord -->
+          <div *ngIf="schedulesByDirection.north.length === 0" class="no-results">
+            <div class="no-results-icon">⬆️</div>
+            <h3>Aucun horaire vers le Nord</h3>
+            <p>Aucun train ne va vers le Nord.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Onglet Îles -->
+      <div *ngIf="activeTab === 'islands'" class="tab-panel">
+        <div class="schedules-list">
+          <div 
+            *ngFor="let scheduleDisplay of schedulesByDirection.islands; trackBy: trackBySchedule" 
+            class="schedule-card"
+            (click)="toggleTripDetails(scheduleDisplay.schedule.trip_id)"
+            [class.expanded]="isExpanded(scheduleDisplay.schedule.trip_id)"
+          >
+            <div class="schedule-header">
+              <div class="schedule-title">
+                <h4>{{ scheduleDisplay.line.name }}</h4>
+                <div class="schedule-meta">
+                  <span class="trip-id">{{ scheduleDisplay.schedule.trip_id }}</span>
+                  <span class="duration">
+                    ⏱️ {{ getTripDuration(scheduleDisplay.schedule) }}
+                  </span>
+                </div>
+              </div>
+              <div class="schedule-description">
+                {{ scheduleDisplay.schedule.description_fr }}
+              </div>
+            </div>
+
+            <!-- Détails de la timeline - visible seulement si développé -->
+            <div 
+              class="schedule-timeline"
+              [class.hidden]="!isExpanded(scheduleDisplay.schedule.trip_id)"
+            >
+              <div class="timeline-header">
+                <span>Station</span>
+                <span>Horaire</span>
+              </div>
+              
+              <div class="timeline-content">
+                <div 
+                  *ngFor="let station of scheduleDisplay.stations; let i = index; trackBy: trackByStation"
+                  class="timeline-stop"
+                  [class.has-stop]="hasStopAtStation(scheduleDisplay.schedule, station.id)"
+                  [class.no-stop]="!hasStopAtStation(scheduleDisplay.schedule, station.id)"
+                >
+                  <div class="stop-station">
+                    <div class="stop-dot" [class.active]="hasStopAtStation(scheduleDisplay.schedule, station.id)"></div>
+                    <div class="station-info">
+                      <span class="station-name">{{ station.name_fr }}</span>
+                      <span class="station-island">
+                        {{ utilsService.getIslandIcon(station.island_fr) }} {{ station.island_fr }}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div class="stop-time">
+                    <span 
+                      class="time" 
+                      [class.no-stop-time]="!hasStopAtStation(scheduleDisplay.schedule, station.id)"
+                    >
+                      {{ hasStopAtStation(scheduleDisplay.schedule, station.id) 
+                         ? utilsService.formatTime(getStopTime(scheduleDisplay.schedule, station.id))
+                         : '---' }}
+                    </span>
+                  </div>
+                  
+                  <div 
+                    *ngIf="i < scheduleDisplay.stations.length - 1" 
+                    class="timeline-connector"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Message si aucun résultat pour Îles -->
+          <div *ngIf="schedulesByDirection.islands.length === 0" class="no-results">
+            <div class="no-results-icon">🏝️</div>
+            <h3>Aucun horaire vers les Îles</h3>
+            <p>Aucun train ne va vers les îles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

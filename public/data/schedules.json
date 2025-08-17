@@ -1,0 +1,371 @@
+[
+  {
+    "line_id": "GT-NK",
+    "schedules": [
+      {
+        "trip_id": "GT-NK-NM-0700",
+        "direction": "northbound",
+        "description_fr": "Départ de Nouméa à 07:00 vers Koumac",
+        "description_en": "Departure from Noumea at 07:00 to Koumac",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "noumea", "departure_time": "07:00"},
+          {"station_id": "paita", "departure_time": "07:15"},
+          {"station_id": "tontouta", "departure_time": "07:25"},
+          {"station_id": "boulouparis", "departure_time": "07:45"},
+          {"station_id": "la-foa", "departure_time": "08:00"},
+          {"station_id": "moindou", "departure_time": "08:10"},
+          {"station_id": "bourail", "departure_time": "08:25"},
+          {"station_id": "poya", "departure_time": "08:40"},
+          {"station_id": "koné", "departure_time": "09:00"},
+          {"station_id": "voh", "departure_time": "09:15"},
+          {"station_id": "kaala-gomen", "departure_time": "09:30"},
+          {"station_id": "koumac", "arrival_time": "09:45"}
+        ]
+      },
+      {
+        "trip_id": "GT-NK-NM-1000",
+        "direction": "northbound",
+        "description_fr": "Départ de Nouméa à 10:00 vers Koumac",
+        "description_en": "Departure from Noumea at 10:00 to Koumac",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "noumea", "departure_time": "10:00"},
+          {"station_id": "paita", "departure_time": "10:15"},
+          {"station_id": "tontouta", "departure_time": "10:25"},
+          {"station_id": "boulouparis", "departure_time": "10:45"},
+          {"station_id": "la-foa", "departure_time": "11:00"},
+          {"station_id": "moindou", "departure_time": "11:10"},
+          {"station_id": "bourail", "departure_time": "11:25"},
+          {"station_id": "poya", "departure_time": "11:40"},
+          {"station_id": "koné", "departure_time": "12:00"},
+          {"station_id": "voh", "departure_time": "12:15"},
+          {"station_id": "kaala-gomen", "departure_time": "12:30"},
+          {"station_id": "koumac", "arrival_time": "12:45"}
+        ]
+      },
+      {
+        "trip_id": "GT-NK-NM-1300",
+        "direction": "northbound",
+        "description_fr": "Départ de Nouméa à 13:00 vers Koumac",
+        "description_en": "Departure from Noumea at 13:00 to Koumac",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "noumea", "departure_time": "13:00"},
+          {"station_id": "paita", "departure_time": "13:15"},
+          {"station_id": "tontouta", "departure_time": "13:25"},
+          {"station_id": "boulouparis", "departure_time": "13:45"},
+          {"station_id": "la-foa", "departure_time": "14:00"},
+          {"station_id": "moindou", "departure_time": "14:10"},
+          {"station_id": "bourail", "departure_time": "14:25"},
+          {"station_id": "poya", "departure_time": "14:40"},
+          {"station_id": "koné", "departure_time": "15:00"},
+          {"station_id": "voh", "departure_time": "15:15"},
+          {"station_id": "kaala-gomen", "departure_time": "15:30"},
+          {"station_id": "koumac", "arrival_time": "15:45"}
+        ]
+      },
+      {
+        "trip_id": "GT-NK-NM-1600",
+        "direction": "northbound",
+        "description_fr": "Départ de Nouméa à 16:00 vers Koumac",
+        "description_en": "Departure from Noumea at 16:00 to Koumac",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "noumea", "departure_time": "16:00"},
+          {"station_id": "paita", "departure_time": "16:15"},
+          {"station_id": "tontouta", "departure_time": "16:25"},
+          {"station_id": "boulouparis", "departure_time": "16:45"},
+          {"station_id": "la-foa", "departure_time": "17:00"},
+          {"station_id": "moindou", "departure_time": "17:10"},
+          {"station_id": "bourail", "departure_time": "17:25"},
+          {"station_id": "poya", "departure_time": "17:40"},
+          {"station_id": "koné", "departure_time": "18:00"},
+          {"station_id": "voh", "departure_time": "18:15"},
+          {"station_id": "kaala-gomen", "departure_time": "18:30"},
+          {"station_id": "koumac", "arrival_time": "18:45"}
+        ]
+      },
+      {
+        "trip_id": "GT-NK-KM-0800",
+        "direction": "southbound",
+        "description_fr": "Départ de Koumac à 08:00 vers Nouméa",
+        "description_en": "Departure from Koumac at 08:00 to Noumea",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "koumac", "departure_time": "08:00"},
+          {"station_id": "kaala-gomen", "departure_time": "08:15"},
+          {"station_id": "voh", "departure_time": "08:30"},
+          {"station_id": "koné", "departure_time": "08:45"},
+          {"station_id": "poya", "departure_time": "09:05"},
+          {"station_id": "bourail", "departure_time": "09:20"},
+          {"station_id": "moindou", "departure_time": "09:35"},
+          {"station_id": "la-foa", "departure_time": "09:50"},
+          {"station_id": "boulouparis", "departure_time": "10:05"},
+          {"station_id": "tontouta", "departure_time": "10:25"},
+          {"station_id": "paita", "departure_time": "10:35"},
+          {"station_id": "noumea", "arrival_time": "10:50"}
+        ]
+      },
+      {
+        "trip_id": "GT-NK-KM-1100",
+        "direction": "southbound",
+        "description_fr": "Départ de Koumac à 11:00 vers Nouméa",
+        "description_en": "Departure from Koumac at 11:00 to Noumea",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "koumac", "departure_time": "11:00"},
+          {"station_id": "kaala-gomen", "departure_time": "11:15"},
+          {"station_id": "voh", "departure_time": "11:30"},
+          {"station_id": "koné", "departure_time": "11:45"},
+          {"station_id": "poya", "departure_time": "12:05"},
+          {"station_id": "bourail", "departure_time": "12:20"},
+          {"station_id": "moindou", "departure_time": "12:35"},
+          {"station_id": "la-foa", "departure_time": "12:50"},
+          {"station_id": "boulouparis", "departure_time": "13:05"},
+          {"station_id": "tontouta", "departure_time": "13:25"},
+          {"station_id": "paita", "departure_time": "13:35"},
+          {"station_id": "noumea", "arrival_time": "13:50"}
+        ]
+      },
+      {
+        "trip_id": "GT-NK-KM-1400",
+        "direction": "southbound",
+        "description_fr": "Départ de Koumac à 14:00 vers Nouméa",
+        "description_en": "Departure from Koumac at 14:00 to Noumea",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "koumac", "departure_time": "14:00"},
+          {"station_id": "kaala-gomen", "departure_time": "14:15"},
+          {"station_id": "voh", "departure_time": "14:30"},
+          {"station_id": "koné", "departure_time": "14:45"},
+          {"station_id": "poya", "departure_time": "15:05"},
+          {"station_id": "bourail", "departure_time": "15:20"},
+          {"station_id": "moindou", "departure_time": "15:35"},
+          {"station_id": "la-foa", "departure_time": "15:50"},
+          {"station_id": "boulouparis", "departure_time": "16:05"},
+          {"station_id": "tontouta", "departure_time": "16:25"},
+          {"station_id": "paita", "departure_time": "16:35"},
+          {"station_id": "noumea", "arrival_time": "16:50"}
+        ]
+      },
+      {
+        "trip_id": "GT-NK-KM-1700",
+        "direction": "southbound",
+        "description_fr": "Départ de Koumac à 17:00 vers Nouméa",
+        "description_en": "Departure from Koumac at 17:00 to Noumea",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "koumac", "departure_time": "17:00"},
+          {"station_id": "kaala-gomen", "departure_time": "17:15"},
+          {"station_id": "voh", "departure_time": "17:30"},
+          {"station_id": "koné", "departure_time": "17:45"},
+          {"station_id": "poya", "departure_time": "18:05"},
+          {"station_id": "bourail", "departure_time": "18:20"},
+          {"station_id": "moindou", "departure_time": "18:35"},
+          {"station_id": "la-foa", "departure_time": "18:50"},
+          {"station_id": "boulouparis", "departure_time": "19:05"},
+          {"station_id": "tontouta", "departure_time": "19:25"},
+          {"station_id": "paita", "departure_time": "19:35"},
+          {"station_id": "noumea", "arrival_time": "19:50"}
+        ]
+      }
+    ]
+  },
+  {
+    "line_id": "GT-LIFOU",
+    "schedules": [
+      {
+        "trip_id": "LIFOU-NM-0700",
+        "direction": "to-lifou",
+        "description_fr": "Départ de Nouméa à 07:00 vers Lifou",
+        "description_en": "Departure from Noumea at 07:00 to Lifou",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "noumea", "departure_time": "07:00"},
+          {"station_id": "lifou-we", "arrival_time": "07:35"}
+        ]
+      },
+      {
+        "trip_id": "LIFOU-NM-1600",
+        "direction": "to-lifou",
+        "description_fr": "Départ de Nouméa à 16:00 vers Lifou",
+        "description_en": "Departure from Noumea at 16:00 to Lifou",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "noumea", "departure_time": "16:00"},
+          {"station_id": "lifou-we", "arrival_time": "16:35"}
+        ]
+      },
+      {
+        "trip_id": "LIFOU-WE-0800",
+        "direction": "from-lifou",
+        "description_fr": "Départ de Lifou à 08:00 vers Nouméa",
+        "description_en": "Departure from Lifou at 08:00 to Noumea",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "lifou-we", "departure_time": "08:00"},
+          {"station_id": "noumea", "arrival_time": "08:35"}
+        ]
+      },
+      {
+        "trip_id": "LIFOU-WE-1700",
+        "direction": "from-lifou",
+        "description_fr": "Départ de Lifou à 17:00 vers Nouméa",
+        "description_en": "Departure from Lifou at 17:00 to Noumea",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "lifou-we", "departure_time": "17:00"},
+          {"station_id": "noumea", "arrival_time": "17:35"}
+        ]
+      }
+    ]
+  },
+  {
+    "line_id": "GT-MARE",
+    "schedules": [
+      {
+        "trip_id": "MARE-NM-0700",
+        "direction": "to-mare",
+        "description_fr": "Départ de Nouméa à 07:00 vers Maré",
+        "description_en": "Departure from Noumea at 07:00 to Maré",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "noumea", "departure_time": "07:00"},
+          {"station_id": "mare-tadine", "arrival_time": "07:40"}
+        ]
+      },
+      {
+        "trip_id": "MARE-NM-1600",
+        "direction": "to-mare",
+        "description_fr": "Départ de Nouméa à 16:00 vers Maré",
+        "description_en": "Departure from Noumea at 16:00 to Maré",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "noumea", "departure_time": "16:00"},
+          {"station_id": "mare-tadine", "arrival_time": "16:40"}
+        ]
+      },
+      {
+        "trip_id": "MARE-TD-0800",
+        "direction": "from-mare",
+        "description_fr": "Départ de Maré à 08:00 vers Nouméa",
+        "description_en": "Departure from Maré at 08:00 to Noumea",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "mare-tadine", "departure_time": "08:00"},
+          {"station_id": "noumea", "arrival_time": "08:40"}
+        ]
+      },
+      {
+        "trip_id": "MARE-TD-1700",
+        "direction": "from-mare",
+        "description_fr": "Départ de Maré à 17:00 vers Nouméa",
+        "description_en": "Departure from Maré at 17:00 to Noumea",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "mare-tadine", "departure_time": "17:00"},
+          {"station_id": "noumea", "arrival_time": "17:40"}
+        ]
+      }
+    ]
+  },
+  {
+    "line_id": "GT-OUVEA",
+    "schedules": [
+      {
+        "trip_id": "OUVEA-NM-0700",
+        "direction": "to-ouvea",
+        "description_fr": "Départ de Nouméa à 07:00 vers Ouvéa",
+        "description_en": "Departure from Noumea at 07:00 to Ouvéa",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "noumea", "departure_time": "07:00"},
+          {"station_id": "ouvea-fayaoue", "arrival_time": "07:30"}
+        ]
+      },
+      {
+        "trip_id": "OUVEA-NM-1600",
+        "direction": "to-ouvea",
+        "description_fr": "Départ de Nouméa à 16:00 vers Ouvéa",
+        "description_en": "Departure from Noumea at 16:00 to Ouvéa",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "noumea", "departure_time": "16:00"},
+          {"station_id": "ouvea-fayaoue", "arrival_time": "16:30"}
+        ]
+      },
+      {
+        "trip_id": "OUVEA-FA-0800",
+        "direction": "from-ouvea",
+        "description_fr": "Départ d'Ouvéa à 08:00 vers Nouméa",
+        "description_en": "Departure from Ouvéa at 08:00 to Noumea",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "ouvea-fayaoue", "departure_time": "08:00"},
+          {"station_id": "noumea", "arrival_time": "08:30"}
+        ]
+      },
+      {
+        "trip_id": "OUVEA-FA-1700",
+        "direction": "from-ouvea",
+        "description_fr": "Départ d'Ouvéa à 17:00 vers Nouméa",
+        "description_en": "Departure from Ouvéa at 17:00 to Noumea",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "ouvea-fayaoue", "departure_time": "17:00"},
+          {"station_id": "noumea", "arrival_time": "17:30"}
+        ]
+      }
+    ]
+  },
+  {
+    "line_id": "GT-ILE-DES-PINS",
+    "schedules": [
+      {
+        "trip_id": "ILE-PINS-NM-0700",
+        "direction": "to-ile-des-pins",
+        "description_fr": "Départ de Nouméa à 07:00 vers l'Île des Pins",
+        "description_en": "Departure from Noumea at 07:00 to Isle of Pines",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "noumea", "departure_time": "07:00"},
+          {"station_id": "ile-des-pins-kunie", "arrival_time": "07:25"}
+        ]
+      },
+      {
+        "trip_id": "ILE-PINS-NM-1600",
+        "direction": "to-ile-des-pins",
+        "description_fr": "Départ de Nouméa à 16:00 vers l'Île des Pins",
+        "description_en": "Departure from Noumea at 16:00 to Isle of Pines",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "noumea", "departure_time": "16:00"},
+          {"station_id": "ile-des-pins-kunie", "arrival_time": "16:25"}
+        ]
+      },
+      {
+        "trip_id": "ILE-PINS-KU-0800",
+        "direction": "from-ile-des-pins",
+        "description_fr": "Départ de l'Île des Pins à 08:00 vers Nouméa",
+        "description_en": "Departure from Isle of Pines at 08:00 to Noumea",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "ile-des-pins-kunie", "departure_time": "08:00"},
+          {"station_id": "noumea", "arrival_time": "08:25"}
+        ]
+      },
+      {
+        "trip_id": "ILE-PINS-KU-1700",
+        "direction": "from-ile-des-pins",
+        "description_fr": "Départ de l'Île des Pins à 17:00 vers Nouméa",
+        "description_en": "Departure from Isle of Pines at 17:00 to Noumea",
+        "days_of_week": ["daily"],
+        "stops": [
+          {"station_id": "ile-des-pins-kunie", "departure_time": "17:00"},
+          {"station_id": "noumea", "arrival_time": "17:25"}
+        ]
+      }
+    ]
+  }
+]

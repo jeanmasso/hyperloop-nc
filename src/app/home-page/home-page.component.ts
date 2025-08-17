@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -8,4 +9,21 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
+  constructor(private router: Router) {}
+
+  navigateToSearch(): void {
+    this.router.navigate(['/search']);
+  }
+
+  navigateToSchedules(): void {
+    this.router.navigate(['/schedules']);
+  }
+
+  navigateToStations(): void {
+    this.router.navigate(['/stations']);
+  }
+
+  navigateToPrices(): void {
+    this.router.navigate(['/prices']);
+  }
 }

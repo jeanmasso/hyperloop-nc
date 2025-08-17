@@ -1,0 +1,239 @@
+<div class="prices-container">
+  <div class="prices-header">
+    <h1 class="display-4">💰 Tarifs de Transport</h1>
+    <p class="lead">Consultez tous les tarifs de transport entre les stations de Nouvelle-Calédonie</p>
+  </div>
+
+  <!-- Loading -->
+  <div *ngIf="loading" class="loading-container">
+    <div class="d-flex flex-column align-items-center">
+      <div class="loading-spinner">💰</div>
+      <p class="mt-3">Chargement des tarifs...</p>
+    </div>
+  </div>
+
+  <!-- Présentation des classes de service -->
+  <div *ngIf="!loading" class="service-classes-section">
+    <div class="section-header">
+      <h2>🎭 Classes de Service</h2>
+      <p class="section-description">Découvrez nos différentes classes de transport adaptées à tous les budgets</p>
+    </div>
+    
+    <div class="classes-grid">
+      <!-- Première Classe -->
+      <div class="class-card premium" [class.active]="activeTab === 'first_class'" (click)="switchTab('first_class')">
+        <div class="class-image-container">
+          <img src="images/first-class.png" alt="Première Classe" class="class-image" />
+        </div>
+        <div class="class-header">
+          <h3 class="class-title">Première Classe</h3>
+          <span class="class-badge premium-badge">Premium</span>
+        </div>
+        <div class="class-features">
+          <ul class="features-list">
+            <li><span class="feature-icon">🛋️</span> Sièges en cuir premium</li>
+            <li><span class="feature-icon">🍽️</span> Service de restauration</li>
+            <li><span class="feature-icon">📱</span> Wi-Fi gratuit</li>
+            <li><span class="feature-icon">🎧</span> Divertissement personnel</li>
+            <li><span class="feature-icon">🧳</span> Bagages prioritaires</li>
+          </ul>
+        </div>
+        <div class="class-pricing">
+          <span class="price-label">À partir de</span>
+          <span class="price-range">1 200 - 2 500 XPF</span>
+        </div>
+      </div>
+
+      <!-- Deuxième Classe -->
+      <div class="class-card standard" [class.active]="activeTab === 'second_class'" (click)="switchTab('second_class')">
+        <div class="class-image-container">
+          <img src="images/second-class.png" alt="Deuxième Classe" class="class-image" />
+        </div>
+        <div class="class-header">
+          <h3 class="class-title">Deuxième Classe</h3>
+          <span class="class-badge standard-badge">Recommandé</span>
+        </div>
+        <div class="class-features">
+          <ul class="features-list">
+            <li><span class="feature-icon">💺</span> Sièges confortables</li>
+            <li><span class="feature-icon">☕</span> Collations disponibles</li>
+            <li><span class="feature-icon">🌡️</span> Climatisation</li>
+            <li><span class="feature-icon">🔌</span> Prises électriques</li>
+            <li><span class="feature-icon">📍</span> Informations de trajet</li>
+          </ul>
+        </div>
+        <div class="class-pricing">
+          <span class="price-label">À partir de</span>
+          <span class="price-range">700 - 1 800 XPF</span>
+        </div>
+      </div>
+
+      <!-- Troisième Classe -->
+      <div class="class-card economy" [class.active]="activeTab === 'third_class'" (click)="switchTab('third_class')">
+        <div class="class-image-container">
+          <img src="images/third-class.png" alt="Troisième Classe" class="class-image" />
+        </div>
+        <div class="class-header">
+          <h3 class="class-title">Troisième Classe</h3>
+          <span class="class-badge economy-badge">Économique</span>
+        </div>
+        <div class="class-features">
+          <ul class="features-list">
+            <li><span class="feature-icon">🪑</span> Sièges standards</li>
+            <li><span class="feature-icon">🚿</span> Toilettes à bord</li>
+            <li><span class="feature-icon">📢</span> Annonces vocales</li>
+            <li><span class="feature-icon">🆘</span> Service d'urgence</li>
+            <li><span class="feature-icon">💼</span> Casiers à bagages</li>
+          </ul>
+        </div>
+        <div class="class-pricing">
+          <span class="price-label">À partir de</span>
+          <span class="price-range">500 - 1 200 XPF</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="selection-indicator">
+      <p class="selected-class-info">
+        <span class="current-icon">{{ getServiceClassIcon(activeTab) }}</span>
+        Tarifs affichés pour : <strong>{{ getServiceClassLabel(activeTab) }}</strong>
+      </p>
+    </div>
+  </div>
+
+  <!-- Filtrage par localisation -->
+  <div *ngIf="!loading" class="location-filter-section">
+    <div class="section-header">
+      <h3>📍 Filtrer par zone géographique</h3>
+      <p class="section-description">Sélectionnez une zone géographique de Nouvelle-Calédonie</p>
+    </div>
+    
+    <div class="location-tabs-container">
+      <div class="location-tabs-header d-flex justify-content-center flex-wrap">
+        <button 
+          class="location-tab-button btn"
+          [class.active]="activeLocationTab === 'grande-terre'"
+          (click)="switchLocationTab('grande-terre')"
+        >
+          <span class="tab-icon">{{ getLocationTabIcon('grande-terre') }}</span>
+          <span class="tab-label">{{ getLocationTabLabel('grande-terre') }}</span>
+          <span class="tab-count">({{ getLocationTabCount('grande-terre') }})</span>
+        </button>
+        
+        <button 
+          class="location-tab-button btn"
+          [class.active]="activeLocationTab === 'loyaute'"
+          (click)="switchLocationTab('loyaute')"
+        >
+          <span class="tab-icon">{{ getLocationTabIcon('loyaute') }}</span>
+          <span class="tab-label">{{ getLocationTabLabel('loyaute') }}</span>
+          <span class="tab-count">({{ getLocationTabCount('loyaute') }})</span>
+        </button>
+        
+        <button 
+          class="location-tab-button btn"
+          [class.active]="activeLocationTab === 'ile-des-pins'"
+          (click)="switchLocationTab('ile-des-pins')"
+        >
+          <span class="tab-icon">{{ getLocationTabIcon('ile-des-pins') }}</span>
+          <span class="tab-label">{{ getLocationTabLabel('ile-des-pins') }}</span>
+          <span class="tab-count">({{ getLocationTabCount('ile-des-pins') }})</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Liste des tarifs -->
+  <div *ngIf="!loading" class="prices-content">
+    <div class="prices-list">
+      <div 
+        *ngFor="let priceDisplay of getFilteredPrices(); trackBy: trackByPrice" 
+        class="price-card"
+        (click)="togglePriceDetails(getPriceId(priceDisplay))"
+        [class.expanded]="isExpanded(getPriceId(priceDisplay))"
+      >
+        <div class="price-header">
+          <div class="route-info">
+            <div class="stations">
+              <div class="origin-station">
+                <span class="station-icon">🚉</span>
+                <span class="station-name">{{ priceDisplay.originStation.name_fr }}</span>
+              </div>
+              <div class="route-arrow">→</div>
+              <div class="destination-station">
+                <span class="station-icon">🚉</span>
+                <span class="station-name">{{ priceDisplay.destinationStation.name_fr }}</span>
+              </div>
+            </div>
+            <div class="route-details" *ngIf="priceDisplay.distance">
+              <span class="distance">{{ priceDisplay.distance }} km</span>
+            </div>
+          </div>
+          <div class="price-info">
+            <div class="current-price">
+              <span class="price-amount">{{ formatPrice(getPriceForClass(priceDisplay.price.prices, activeTab)) }}</span>
+              <span class="price-class">{{ getServiceClassLabel(activeTab) }}</span>
+            </div>
+            <div class="price-per-km" *ngIf="priceDisplay.pricePerKm && activeTab === 'second_class'">
+              <span class="rate">{{ formatPrice(priceDisplay.pricePerKm) }}/km</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Détails du tarif (expandable) -->
+        <div *ngIf="isExpanded(getPriceId(priceDisplay))" class="price-details">
+          <div class="details-section">
+            <h5>💰 Tarifs par classe :</h5>
+            <div class="prices-breakdown">
+              <div class="price-class-item">
+                <span class="class-icon">✨</span>
+                <span class="class-name">Première Classe</span>
+                <span class="class-price">{{ formatPrice(priceDisplay.price.prices.first_class) }}</span>
+              </div>
+              <div class="price-class-item">
+                <span class="class-icon">🚂</span>
+                <span class="class-name">Deuxième Classe</span>
+                <span class="class-price">{{ formatPrice(priceDisplay.price.prices.second_class) }}</span>
+              </div>
+              <div class="price-class-item">
+                <span class="class-icon">🎫</span>
+                <span class="class-name">Troisième Classe</span>
+                <span class="class-price">{{ formatPrice(priceDisplay.price.prices.third_class) }}</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="details-section" *ngIf="priceDisplay.distance">
+            <h5>📏 Informations de trajet :</h5>
+            <div class="route-stats">
+              <div class="stat-item">
+                <span class="stat-label">Distance :</span>
+                <span class="stat-value">{{ priceDisplay.distance }} km</span>
+              </div>
+              <div class="stat-item" *ngIf="priceDisplay.pricePerKm">
+                <span class="stat-label">Prix au km (2e classe) :</span>
+                <span class="stat-value">{{ formatPrice(priceDisplay.pricePerKm) }}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="details-section">
+            <h5>🏝️ Îles desservies :</h5>
+            <div class="islands-info">
+              <span class="island-badge origin">{{ priceDisplay.originStation.island_fr }}</span>
+              <span class="arrow">→</span>
+              <span class="island-badge destination">{{ priceDisplay.destinationStation.island_fr }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Message si aucun tarif -->
+    <div *ngIf="getFilteredPrices().length === 0" class="no-results">
+      <div class="no-results-icon">💰</div>
+      <h3>Aucun tarif trouvé</h3>
+      <p>Aucun tarif n'est disponible pour la zone {{ getLocationTabLabel(activeLocationTab) }} en {{ getServiceClassLabel(activeTab) }}.</p>
+    </div>
+  </div>
+</div>

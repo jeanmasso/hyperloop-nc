@@ -1,0 +1,263 @@
+<div class="search-container">
+  <div class="search-header">
+    <h1 class="display-4">🔍 Recherche de Trajets</h1>
+    <p class="lead">Trouvez le trajet parfait pour votre voyage en Nouvelle-Calédonie</p>
+  </div>
+
+  <!-- Formulaire de recherche -->
+  <div class="search-form-section">
+    <div class="search-form-card">
+      <div class="form-header">
+        <h3>🎯 Vos critères de recherche</h3>
+        <p class="form-description">Sélectionnez votre trajet et vos préférences</p>
+      </div>
+
+      <form class="search-form" (ngSubmit)="performSearch()">
+        <!-- Sélection des stations -->
+        <div class="stations-row">
+          <div class="station-group">
+            <label class="form-label">
+              <span class="label-icon">🚉</span>
+              Station de départ
+            </label>
+            <select 
+              class="form-select"
+              [(ngModel)]="searchCriteria.originId"
+              name="origin"
+              required
+            >
+              <option value="">Choisir une station de départ</option>
+              <option 
+                *ngFor="let station of stations$ | async" 
+                [value]="station.id"
+              >
+                {{ station.name_fr }} ({{ station.island_fr }})
+              </option>
+            </select>
+          </div>
+
+          <div class="swap-button-container">
+            <button 
+              type="button" 
+              class="swap-button btn"
+              (click)="swapStations()"
+              [disabled]="!searchCriteria.originId && !searchCriteria.destinationId"
+              title="Échanger les stations"
+            >
+              🔄
+            </button>
+          </div>
+
+          <div class="station-group">
+            <label class="form-label">
+              <span class="label-icon">🏁</span>
+              Station d'arrivée
+            </label>
+            <select 
+              class="form-select"
+              [(ngModel)]="searchCriteria.destinationId"
+              name="destination"
+              required
+            >
+              <option value="">Choisir une station d'arrivée</option>
+              <option 
+                *ngFor="let station of stations$ | async" 
+                [value]="station.id"
+                [disabled]="station.id === searchCriteria.originId"
+              >
+                {{ station.name_fr }} ({{ station.island_fr }})
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Autres critères -->
+        <div class="criteria-row">
+          <div class="form-group">
+            <label class="form-label">
+              <span class="label-icon">📅</span>
+              Date de départ
+            </label>
+            <input 
+              type="date" 
+              class="form-control"
+              [(ngModel)]="searchCriteria.departureDate"
+              name="departureDate"
+              [min]="searchCriteria.departureDate | date:'yyyy-MM-dd'"
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">
+              <span class="label-icon">🎭</span>
+              Classe de service
+            </label>
+            <select 
+              class="form-select"
+              [(ngModel)]="searchCriteria.serviceClass"
+              name="serviceClass"
+            >
+              <option 
+                *ngFor="let option of serviceClassOptions" 
+                [value]="option.value"
+              >
+                {{ option.label }}
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">
+              <span class="label-icon">🕐</span>
+              Préférence horaire
+            </label>
+            <select 
+              class="form-select"
+              [(ngModel)]="searchCriteria.timePreference"
+              name="timePreference"
+            >
+              <option 
+                *ngFor="let option of timePreferenceOptions" 
+                [value]="option.value"
+              >
+                {{ option.icon }} {{ option.label }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Boutons d'action -->
+        <div class="form-actions">
+          <button 
+            type="button"
+            class="btn btn-secondary"
+            (click)="resetSearch()"
+          >
+            <span class="btn-icon">🔄</span>
+            Réinitialiser
+          </button>
+          
+          <button 
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="!isSearchValid() || loading"
+          >
+            <span class="btn-icon" *ngIf="!loading">🔍</span>
+            <span class="btn-icon loading-spinner" *ngIf="loading">⏳</span>
+            {{ loading ? 'Recherche...' : 'Rechercher' }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Résultats de recherche -->
+  <div *ngIf="searchPerformed" class="search-results-section">
+    <div class="results-header">
+      <h3>📋 Résultats de recherche</h3>
+      <div class="results-info">
+        <span class="results-count">{{ searchResults.length }} trajet(s) trouvé(s)</span>
+        <div class="selected-criteria">
+          <span class="criteria-badge" *ngIf="searchCriteria.serviceClass">
+            {{ getServiceClassIcon(searchCriteria.serviceClass) }}
+            {{ getServiceClassLabel(searchCriteria.serviceClass) }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Liste des résultats -->
+    <div class="results-list" *ngIf="searchResults.length > 0">
+      <div 
+        *ngFor="let result of searchResults; trackBy: trackByResult" 
+        class="result-card"
+      >
+        <div class="result-header">
+          <div class="route-info">
+            <div class="stations-route">
+              <div class="station origin">
+                <span class="station-icon">🚉</span>
+                <div class="station-details">
+                  <span class="station-name">{{ result.origin.name_fr }}</span>
+                  <span class="station-island">{{ result.origin.island_fr }}</span>
+                </div>
+              </div>
+              
+              <div class="route-arrow">
+                <span class="arrow">→</span>
+                <span class="duration" *ngIf="result.duration">{{ result.duration }}</span>
+              </div>
+              
+              <div class="station destination">
+                <span class="station-icon">🏁</span>
+                <div class="station-details">
+                  <span class="station-name">{{ result.destination.name_fr }}</span>
+                  <span class="station-island">{{ result.destination.island_fr }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="price-info">
+            <div class="price-amount">
+              <span class="price-value">
+                {{ formatPrice(result.price[searchCriteria.serviceClass!]) }}
+              </span>
+              <span class="price-class">{{ getServiceClassLabel(searchCriteria.serviceClass!) }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-details">
+          <div class="schedule-info">
+            <span class="schedule-icon">🕐</span>
+            <span class="schedule-text">{{ result.schedule.description_fr }}</span>
+          </div>
+          
+          <div class="additional-info" *ngIf="result.distance">
+            <span class="distance">
+              <span class="distance-icon">📏</span>
+              {{ result.distance }} km
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Message si aucun résultat -->
+    <div class="no-results" *ngIf="searchResults.length === 0 && !loading">
+      <div class="no-results-icon">🔍</div>
+      <h4>Aucun trajet trouvé</h4>
+      <p>Aucun trajet ne correspond à vos critères de recherche.</p>
+      <div class="suggestions">
+        <p>Suggestions :</p>
+        <ul>
+          <li>Vérifiez les stations sélectionnées</li>
+          <li>Essayez une autre classe de service</li>
+          <li>Modifiez vos préférences horaires</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message de première visite -->
+  <div *ngIf="!searchPerformed && !loading" class="welcome-message">
+    <div class="welcome-icon">🎯</div>
+    <h3>Prêt à voyager ?</h3>
+    <p>Sélectionnez vos stations de départ et d'arrivée pour commencer votre recherche de trajet.</p>
+    <div class="features">
+      <div class="feature">
+        <span class="feature-icon">⚡</span>
+        <span class="feature-text">Recherche rapide</span>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">🎭</span>
+        <span class="feature-text">Toutes les classes</span>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">🕐</span>
+        <span class="feature-text">Horaires flexibles</span>
+      </div>
+    </div>
+  </div>
+</div>

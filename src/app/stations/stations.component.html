@@ -1,0 +1,214 @@
+<div class="stations-container">
+  <div class="stations-header">
+    <h1 class="display-4">🚉 Stations de Transport</h1>
+    <p class="lead">Découvrez toutes les stations du réseau de transport de Nouvelle-Calédonie avec leurs lignes et connexions</p>
+  </div>
+
+  <!-- Loading -->
+  <div *ngIf="loading" class="loading-container">
+    <div class="d-flex flex-column align-items-center">
+      <div class="loading-spinner">🚇</div>
+      <p class="mt-3">Chargement des stations...</p>
+    </div>
+  </div>
+
+  <!-- Onglets -->
+  <div *ngIf="!loading" class="tabs-container">
+    <div class="tabs-header d-flex justify-content-center flex-wrap">
+      <button 
+        class="tab-button btn"
+        [class.active]="activeTab === 'grande-terre'"
+        (click)="switchTab('grande-terre')"
+      >
+        <span class="tab-icon">🏔️</span>
+        <span class="tab-label">Grande-Terre</span>
+        <span class="tab-count">({{ getStationsForTab('grande-terre').length }})</span>
+      </button>
+      
+      <button 
+        class="tab-button btn"
+        [class.active]="activeTab === 'loyaute'"
+        (click)="switchTab('loyaute')"
+      >
+        <span class="tab-icon">🏝️</span>
+        <span class="tab-label">Îles Loyauté</span>
+        <span class="tab-count">({{ getStationsForTab('loyaute').length }})</span>
+      </button>
+      
+      <button 
+        class="tab-button btn"
+        [class.active]="activeTab === 'ile-des-pins'"
+        (click)="switchTab('ile-des-pins')"
+      >
+        <span class="tab-icon">🌴</span>
+        <span class="tab-label">Île des Pins</span>
+        <span class="tab-count">({{ getStationsForTab('ile-des-pins').length }})</span>
+      </button>
+    </div>
+
+    <!-- Contenu des onglets -->
+    <div class="tabs-content">
+      <!-- Onglet Grande-Terre -->
+      <div *ngIf="activeTab === 'grande-terre'" class="tab-panel">
+        <div class="stations-list">
+          <div 
+            *ngFor="let stationDisplay of getStationsForTab('grande-terre'); trackBy: trackByStation" 
+            class="station-card"
+            (click)="toggleStationDetails(stationDisplay.station.id)"
+            [class.expanded]="isExpanded(stationDisplay.station.id)"
+          >
+            <div class="station-header">
+              <div class="station-title">
+                <span class="station-icon">{{ getStationTypeIcon(stationDisplay) }}</span>
+                <div class="station-names">
+                  <h4>{{ stationDisplay.station.name_fr }}</h4>
+                </div>
+              </div>
+              <div class="station-stats">
+                <div class="stat-badge lines">
+                  <span class="stat-number">{{ stationDisplay.linesServed.length }}</span>
+                  <span class="stat-text">lignes</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Détails de la station (expandable) -->
+            <div *ngIf="isExpanded(stationDisplay.station.id)" class="station-details">
+              <div class="details-section">
+                <h5>🚇 Lignes desservies :</h5>
+                <div class="lines-list">
+                  <span 
+                    *ngFor="let line of stationDisplay.linesServed; trackBy: trackByLine" 
+                    class="line-badge"
+                  >
+                    {{ line.name }}
+                  </span>
+                </div>
+              </div>
+              
+              <div class="details-section" *ngIf="stationDisplay.station.coordinates">
+                <h5>📍 Coordonnées :</h5>
+                <p>{{ stationDisplay.station.coordinates.lat }}, {{ stationDisplay.station.coordinates.lon }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Message si aucune station -->
+        <div *ngIf="getStationsForTab('grande-terre').length === 0" class="no-results">
+          <div class="no-results-icon">🚉</div>
+          <h3>Aucune station trouvée</h3>
+          <p>Aucune station n'est disponible pour cette région.</p>
+        </div>
+      </div>
+
+      <!-- Onglet Îles Loyauté -->
+      <div *ngIf="activeTab === 'loyaute'" class="tab-panel">
+        <div class="stations-list">
+          <div 
+            *ngFor="let stationDisplay of getStationsForTab('loyaute'); trackBy: trackByStation" 
+            class="station-card"
+            (click)="toggleStationDetails(stationDisplay.station.id)"
+            [class.expanded]="isExpanded(stationDisplay.station.id)"
+          >
+            <div class="station-header">
+              <div class="station-title">
+                <span class="station-icon">{{ getStationTypeIcon(stationDisplay) }}</span>
+                <div class="station-names">
+                  <h4>{{ stationDisplay.station.name_fr }}</h4>
+                </div>
+              </div>
+              <div class="station-stats">
+                <div class="stat-badge lines">
+                  <span class="stat-number">{{ stationDisplay.linesServed.length }}</span>
+                  <span class="stat-text">lignes</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Détails de la station (expandable) -->
+            <div *ngIf="isExpanded(stationDisplay.station.id)" class="station-details">
+              <div class="details-section">
+                <h5>🚇 Lignes desservies :</h5>
+                <div class="lines-list">
+                  <span 
+                    *ngFor="let line of stationDisplay.linesServed; trackBy: trackByLine" 
+                    class="line-badge"
+                  >
+                    {{ line.name }}
+                  </span>
+                </div>
+              </div>
+              
+              <div class="details-section" *ngIf="stationDisplay.station.coordinates">
+                <h5>📍 Coordonnées :</h5>
+                <p>{{ stationDisplay.station.coordinates.lat }}, {{ stationDisplay.station.coordinates.lon }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Message si aucune station -->
+        <div *ngIf="getStationsForTab('loyaute').length === 0" class="no-results">
+          <div class="no-results-icon">🚉</div>
+          <h3>Aucune station trouvée</h3>
+          <p>Aucune station n'est disponible pour cette région.</p>
+        </div>
+      </div>
+
+      <!-- Onglet Île des Pins -->
+      <div *ngIf="activeTab === 'ile-des-pins'" class="tab-panel">
+        <div class="stations-list">
+          <div 
+            *ngFor="let stationDisplay of getStationsForTab('ile-des-pins'); trackBy: trackByStation" 
+            class="station-card"
+            (click)="toggleStationDetails(stationDisplay.station.id)"
+            [class.expanded]="isExpanded(stationDisplay.station.id)"
+          >
+            <div class="station-header">
+              <div class="station-title">
+                <span class="station-icon">{{ getStationTypeIcon(stationDisplay) }}</span>
+                <div class="station-names">
+                  <h4>{{ stationDisplay.station.name_fr }}</h4>
+                </div>
+              </div>
+              <div class="station-stats">
+                <div class="stat-badge lines">
+                  <span class="stat-number">{{ stationDisplay.linesServed.length }}</span>
+                  <span class="stat-text">lignes</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Détails de la station (expandable) -->
+            <div *ngIf="isExpanded(stationDisplay.station.id)" class="station-details">
+              <div class="details-section">
+                <h5>🚇 Lignes desservies :</h5>
+                <div class="lines-list">
+                  <span 
+                    *ngFor="let line of stationDisplay.linesServed; trackBy: trackByLine" 
+                    class="line-badge"
+                  >
+                    {{ line.name }}
+                  </span>
+                </div>
+              </div>
+              
+              <div class="details-section" *ngIf="stationDisplay.station.coordinates">
+                <h5>📍 Coordonnées :</h5>
+                <p>{{ stationDisplay.station.coordinates.lat }}, {{ stationDisplay.station.coordinates.lon }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Message si aucune station -->
+        <div *ngIf="getStationsForTab('ile-des-pins').length === 0" class="no-results">
+          <div class="no-results-icon">🚉</div>
+          <h3>Aucune station trouvée</h3>
+          <p>Aucune station n'est disponible pour cette région.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,450 @@
+/* Container principal */
+.stations-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
+}
+
+/* Header de la page */
+.stations-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.stations-header h1.display-4 {
+  color: #333 !important;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.stations-header p.lead {
+  color: #666 !important;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Loading */
+.loading-container {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #333;
+}
+
+.loading-spinner {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.loading-container p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Onglets */
+.tabs-container {
+  margin-top: 2rem;
+}
+
+.tabs-header {
+  display: flex;
+  border-bottom: 3px solid #e1e5e9;
+  margin-bottom: 2rem;
+  background: white;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tab-button.btn {
+  flex: 1;
+  background: #f8f9fa !important;
+  color: #666 !important;
+  border: none !important;
+  padding: 1.5rem 2rem;
+  border-radius: 0 !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  position: relative;
+}
+
+.tab-button.btn:hover {
+  background: #e9ecef !important;
+  color: #333 !important;
+  transform: none;
+  box-shadow: none !important;
+}
+
+.tab-button.btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  box-shadow: 0 -2px 8px rgba(102, 126, 234, 0.3) !important;
+}
+
+.tab-button.btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.tab-button.btn:focus {
+  box-shadow: none !important;
+}
+
+.tab-icon {
+  font-size: 1.5rem;
+}
+
+.tab-label {
+  font-weight: 600;
+}
+
+.tab-count {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.tab-button.active .tab-count {
+  opacity: 1;
+}
+
+/* Contenu des onglets */
+.tabs-content {
+  margin-top: 2rem;
+}
+
+.tab-panel {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Liste des stations */
+.stations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Cartes des stations */
+.station-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #e1e5e9;
+  padding: 0;
+}
+
+.station-card::before {
+  display: none;
+}
+
+.station-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.station-card.expanded {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.station-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  margin: 0;
+  border-radius: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.station-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.station-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.station-names h4 {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;
+}
+
+.station-island {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.station-stats {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 50px;
+  color: white;
+}
+
+.stat-number {
+  display: block;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.stat-text {
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Détails de la station */
+.station-details {
+  padding: 1.5rem;
+  margin-top: 0;
+  border-top: none;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 300px;
+    transform: translateY(0);
+  }
+}
+
+.details-section {
+  margin-bottom: 1.5rem;
+}
+
+.details-section h5 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.details-section p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.lines-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.line-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Messages d'état vide */
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+}
+
+.no-results-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+  color: #999;
+}
+
+.no-results h3 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.no-results p {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #666;
+}
+
+/* Design responsive */
+@media (max-width: 768px) {
+  .stations-container {
+    padding: 1rem;
+  }
+  
+  .stations-header h1 {
+    font-size: 2rem !important;
+  }
+  
+  .stations-header p {
+    font-size: 1rem !important;
+  }
+  
+  .tabs-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .tab-button {
+    border-radius: 8px !important;
+    margin: 0.25rem 0 !important;
+  }
+  
+  .stations-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .station-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .station-stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .stations-container {
+    padding: 0.5rem;
+  }
+  
+  .stations-header h1 {
+    font-size: 1.8rem !important;
+  }
+  
+  .station-card {
+    margin: 0.5rem 0;
+  }
+  
+  .station-header {
+    padding: 1rem;
+  }
+  
+  .station-names h4 {
+    font-size: 1.2rem;
+  }
+  
+  .station-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .station-details {
+    padding: 1rem;
+  }
+}
+
+/* Accessibilité et autres états */
+@media (prefers-reduced-motion: reduce) {
+  .station-card,
+  .tab-button {
+    transition: none;
+  }
+  
+  .tab-panel {
+    animation: none;
+  }
+  
+  .station-details {
+    animation: none;
+  }
+  
+  .loading-spinner {
+    animation: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .station-card {
+    border: 2px solid #333;
+  }
+  
+  .tab-button {
+    border: 2px solid #333 !important;
+  }
+  
+  .stat-badge {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+}

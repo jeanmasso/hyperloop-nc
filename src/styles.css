@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* Import de Bootstrap */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 /* Reset et styles de base */
 * {
   margin: 0;
