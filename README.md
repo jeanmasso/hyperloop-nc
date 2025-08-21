@@ -4,6 +4,8 @@
 
 Une application web moderne développée avec Angular 19 qui simule un système de transport futuriste connectant toutes les îles de Nouvelle-Calédonie.
 
+**🌍 Application multilingue disponible en 3 langues : Anglais, Français et Espagnol**
+
 ## 🌟 Fonctionnalités
 
 ### 🔍 **Recherche de Trajets**
@@ -36,9 +38,18 @@ Une application web moderne développée avec Angular 19 qui simule un système 
 - Design moderne avec dégradés et animations
 - Cartes interactives pour découvrir les services
 
+### 🌍 **Internationalisation (i18n)**
+- Support multilingue complet avec Angular i18n
+- **3 langues disponibles** : Anglais (par défaut), Français, Espagnol
+- Interface entièrement traduite pour tous les composants
+- Extraction automatique des clés de traduction
+- Build spécialisé pour chaque langue
+- Navigation fluide entre les versions linguistiques
+
 ## 🛠️ Technologies Utilisées
 
 - **Frontend** : Angular 19 avec TypeScript
+- **Internationalisation** : @angular/localize pour le support multilingue
 - **Styling** : Bootstrap 5 + CSS personnalisé
 - **Gestion d'état** : RxJS avec Observables
 - **Données** : Fichiers JSON statiques
@@ -65,6 +76,9 @@ src/
 │   │   └── utils.service.ts # Utilitaires
 │   ├── models/              # Modèles TypeScript
 │   └── assets/              # Ressources statiques
+├── locale/                  # Fichiers de traduction i18n
+│   ├── messages.fr.xlf      # Traductions françaises
+│   └── messages.es.xlf      # Traductions espagnoles
 └── public/
     └── data/                # Données JSON
         ├── stations.json    # Stations du réseau
@@ -74,6 +88,19 @@ src/
 ```
 
 ## 🚀 Installation et Lancement
+
+### 🌍 Accès Rapide aux Versions Linguistiques
+
+```bash
+# Version Anglaise (défaut)
+npm start                    # → http://localhost:4200
+
+# Version Française  
+npm run start:fr            # → http://localhost:4201
+
+# Version Espagnole
+npm run start:es            # → http://localhost:4202
+```
 
 ### Prérequis
 - Node.js (version 18 ou supérieure)
@@ -97,7 +124,7 @@ yarn install
 ### Développement
 
 ```bash
-# Lancer le serveur de développement
+# Lancer le serveur de développement (version anglaise par défaut)
 npm start
 # ou
 ng serve
@@ -105,15 +132,89 @@ ng serve
 # L'application sera accessible sur http://localhost:4200
 ```
 
+### 🌍 Versions Multilingues
+
+```bash
+# Lancer la version française
+npm run start:fr
+# Accessible sur http://localhost:4201
+
+# Lancer la version espagnole  
+npm run start:es
+# Accessible sur http://localhost:4202
+
+# Lancer toutes les versions simultanément
+npm run start:all
+# Anglais: http://localhost:4200
+# Français: http://localhost:4201  
+# Espagnol: http://localhost:4202
+```
+
+### Gestion des Traductions
+
+```bash
+# Extraire les nouvelles clés de traduction
+ng extract-i18n
+
+# Les fichiers de traduction seront mis à jour :
+# - messages.xlf (source anglaise)
+# - src/locale/messages.fr.xlf (français)  
+# - src/locale/messages.es.xlf (espagnol)
+```
+
 ### Build de Production
 
 ```bash
-# Créer un build de production
+# Créer un build de production (version anglaise)
 npm run build
 # ou
-ng build --prod
+ng build
+
+# Build pour toutes les langues
+npm run build:i18n
+
+# Builds séparés par langue
+npm run build:fr    # Build français
+npm run build:es    # Build espagnol
 
 # Les fichiers seront générés dans le dossier dist/
+# - dist/hyperloop-nc/en/  (anglais)
+# - dist/hyperloop-nc/fr/  (français)  
+# - dist/hyperloop-nc/es/  (espagnol)
+```
+
+## 🌍 Internationalisation
+
+### Langues Supportées
+- 🇬🇧 **Anglais** (par défaut) - Langue source
+- 🇫🇷 **Français** - Traduction complète
+- 🇪🇸 **Espagnol** - Traduction complète
+
+### Caractéristiques i18n
+- **163 messages traduits** couvrant l'ensemble de l'application
+- **Extraction automatique** des clés avec Angular CLI
+- **Fichiers .xlf** standard pour la gestion des traductions
+- **Support complet** de tous les composants :
+  - Navigation et en-têtes
+  - Formulaires de recherche
+  - Pages de résultats
+  - Messages d'erreur et de validation
+  - Informations sur les tarifs et horaires
+
+### Architecture i18n
+```typescript
+// Configuration dans angular.json
+"i18n": {
+  "sourceLocale": "en-US",
+  "locales": {
+    "fr": "src/locale/messages.fr.xlf",
+    "es": "src/locale/messages.es.xlf"
+  }
+}
+
+// Utilisation dans les templates
+<h1 i18n="page title">Transport Stations</h1>
+<p i18n="@@custom.id">Custom message with ID</p>
 ```
 
 ## 🧪 Tests
@@ -180,9 +281,17 @@ ng generate module nom-module
 # Linter le code
 ng lint
 
+# Extraire les traductions
+ng extract-i18n
+
 # Analyser le bundle
 ng build --stats-json
 npx webpack-bundle-analyzer dist/hyperloop-nc/stats.json
+
+# Commandes i18n spécifiques
+npm run extract-i18n     # Extraction des clés
+npm run start:all         # Lancement multi-langues
+npm run build:i18n        # Build de toutes les langues
 ```
 
 ### Standards de Code
