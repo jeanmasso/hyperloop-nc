@@ -1,15 +1,15 @@
 <div class="search-container">
   <div class="search-header">
-    <h1 class="display-4">🔍 Recherche de Trajets</h1>
-    <p class="lead">Trouvez le trajet parfait pour votre voyage en Nouvelle-Calédonie</p>
+    <h1 class="display-4" i18n="search page title">🔍 Trip Search</h1>
+    <p class="lead" i18n="search page description">Find the perfect trip for your journey in New Caledonia</p>
   </div>
 
   <!-- Formulaire de recherche -->
   <div class="search-form-section">
     <div class="search-form-card">
       <div class="form-header">
-        <h3>🎯 Vos critères de recherche</h3>
-        <p class="form-description">Sélectionnez votre trajet et vos préférences</p>
+        <h3 i18n="search criteria title">🎯 Your search criteria</h3>
+        <p class="form-description" i18n="search criteria description">Select your trip and preferences</p>
       </div>
 
       <form class="search-form" (ngSubmit)="performSearch()">
@@ -18,7 +18,7 @@
           <div class="station-group">
             <label class="form-label">
               <span class="label-icon">🚉</span>
-              Station de départ
+              <span i18n="@@search.departure-station">Departure station</span>
             </label>
             <select 
               class="form-select"
@@ -26,7 +26,7 @@
               name="origin"
               required
             >
-              <option value="">Choisir une station de départ</option>
+              <option value="" i18n="@@search.choose-departure">Choose a departure station</option>
               <option 
                 *ngFor="let station of stations$ | async" 
                 [value]="station.id"
@@ -42,7 +42,8 @@
               class="swap-button btn"
               (click)="swapStations()"
               [disabled]="!searchCriteria.originId && !searchCriteria.destinationId"
-              title="Échanger les stations"
+              i18n-title="@@search.swap-stations"
+              title="Swap stations"
             >
               🔄
             </button>
@@ -51,7 +52,7 @@
           <div class="station-group">
             <label class="form-label">
               <span class="label-icon">🏁</span>
-              Station d'arrivée
+              <span i18n="@@search.arrival-station">Arrival station</span>
             </label>
             <select 
               class="form-select"
@@ -59,7 +60,7 @@
               name="destination"
               required
             >
-              <option value="">Choisir une station d'arrivée</option>
+              <option value="" i18n="@@search.choose-arrival">Choose an arrival station</option>
               <option 
                 *ngFor="let station of stations$ | async" 
                 [value]="station.id"
@@ -76,7 +77,7 @@
           <div class="form-group">
             <label class="form-label">
               <span class="label-icon">📅</span>
-              Date de départ
+              <span i18n="@@search.departure-date">Departure date</span>
             </label>
             <input 
               type="date" 
@@ -90,7 +91,7 @@
           <div class="form-group">
             <label class="form-label">
               <span class="label-icon">🎭</span>
-              Classe de service
+              <span i18n="@@search.service-class">Service class</span>
             </label>
             <select 
               class="form-select"
@@ -109,7 +110,7 @@
           <div class="form-group">
             <label class="form-label">
               <span class="label-icon">🕐</span>
-              Préférence horaire
+              <span i18n="@@search.time-preference">Time preference</span>
             </label>
             <select 
               class="form-select"
@@ -134,7 +135,7 @@
             (click)="resetSearch()"
           >
             <span class="btn-icon">🔄</span>
-            Réinitialiser
+            <span i18n="@@search.reset">Reset</span>
           </button>
           
           <button 
@@ -144,7 +145,8 @@
           >
             <span class="btn-icon" *ngIf="!loading">🔍</span>
             <span class="btn-icon loading-spinner" *ngIf="loading">⏳</span>
-            {{ loading ? 'Recherche...' : 'Rechercher' }}
+            <span *ngIf="loading" i18n="@@search.searching">Searching...</span>
+            <span *ngIf="!loading" i18n="@@search.search">Search</span>
           </button>
         </div>
       </form>
@@ -154,9 +156,9 @@
   <!-- Résultats de recherche -->
   <div *ngIf="searchPerformed" class="search-results-section">
     <div class="results-header">
-      <h3>📋 Résultats de recherche</h3>
+      <h3 i18n="@@search.results-title">📋 Search results</h3>
       <div class="results-info">
-        <span class="results-count">{{ searchResults.length }} trajet(s) trouvé(s)</span>
+        <span class="results-count" i18n="@@search.results-count">{{ searchResults.length }} trip(s) found</span>
         <div class="selected-criteria">
           <span class="criteria-badge" *ngIf="searchCriteria.serviceClass">
             {{ getServiceClassIcon(searchCriteria.serviceClass) }}
@@ -217,7 +219,7 @@
           <div class="additional-info" *ngIf="result.distance">
             <span class="distance">
               <span class="distance-icon">📏</span>
-              {{ result.distance }} km
+              <span>{{ result.distance }} km</span>
             </span>
           </div>
         </div>
@@ -227,14 +229,14 @@
     <!-- Message si aucun résultat -->
     <div class="no-results" *ngIf="searchResults.length === 0 && !loading">
       <div class="no-results-icon">🔍</div>
-      <h4>Aucun trajet trouvé</h4>
-      <p>Aucun trajet ne correspond à vos critères de recherche.</p>
+      <h4 i18n="@@search.no-results-title">No trip found</h4>
+      <p i18n="@@search.no-results-message">No trip matches your search criteria.</p>
       <div class="suggestions">
-        <p>Suggestions :</p>
+        <p i18n="@@search.suggestions-title">Suggestions:</p>
         <ul>
-          <li>Vérifiez les stations sélectionnées</li>
-          <li>Essayez une autre classe de service</li>
-          <li>Modifiez vos préférences horaires</li>
+          <li i18n="@@search.suggestion-1">Check the selected stations</li>
+          <li i18n="@@search.suggestion-2">Try another service class</li>
+          <li i18n="@@search.suggestion-3">Change your time preferences</li>
         </ul>
       </div>
     </div>
@@ -243,20 +245,20 @@
   <!-- Message de première visite -->
   <div *ngIf="!searchPerformed && !loading" class="welcome-message">
     <div class="welcome-icon">🎯</div>
-    <h3>Prêt à voyager ?</h3>
-    <p>Sélectionnez vos stations de départ et d'arrivée pour commencer votre recherche de trajet.</p>
+    <h3 i18n="@@search.welcome-title">Ready to travel?</h3>
+    <p i18n="@@search.welcome-message">Select your departure and arrival stations to start your trip search.</p>
     <div class="features">
       <div class="feature">
         <span class="feature-icon">⚡</span>
-        <span class="feature-text">Recherche rapide</span>
+        <span class="feature-text" i18n="@@search.feature-fast">Fast search</span>
       </div>
       <div class="feature">
         <span class="feature-icon">🎭</span>
-        <span class="feature-text">Toutes les classes</span>
+        <span class="feature-text" i18n="@@search.feature-classes">All classes</span>
       </div>
       <div class="feature">
         <span class="feature-icon">🕐</span>
-        <span class="feature-text">Horaires flexibles</span>
+        <span class="feature-text" i18n="@@search.feature-flexible">Flexible schedules</span>
       </div>
     </div>
   </div>

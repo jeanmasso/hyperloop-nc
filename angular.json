@@ -9,6 +9,19 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr": {
+            "translation": "src/locale/messages.fr.xlf",
+            "baseHref": ""
+          },
+          "es": {
+            "translation": "src/locale/messages.es.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -17,7 +30,8 @@
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -47,6 +61,16 @@
               ],
               "outputHashing": "all"
             },
+            "fr": {
+              "localize": ["fr"],
+              "outputPath": "dist/site-fr/",
+              "i18nMissingTranslation": "error"
+            },
+            "es": {
+              "localize": ["es"],
+              "outputPath": "dist/site-es/",
+              "i18nMissingTranslation": "error"
+            },
             "development": {
               "optimization": false,
               "extractLicenses": false,
@@ -60,6 +84,12 @@
           "configurations": {
             "production": {
               "buildTarget": "hyperloop-nc:build:production"
+            },
+            "fr": {
+              "buildTarget": "hyperloop-nc:build:fr"
+            },
+            "es": {
+              "buildTarget": "hyperloop-nc:build:es"
             },
             "development": {
               "buildTarget": "hyperloop-nc:build:development"
@@ -75,7 +105,8 @@
           "options": {
             "polyfills": [
               "zone.js",
-              "zone.js/testing"
+              "zone.js/testing",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [

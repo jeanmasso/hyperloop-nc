@@ -1,36 +1,36 @@
 <div class="home-container">
   <header class="hero-section">
     <div class="hero-content">
-      <h1 class="hero-title">Hyperloop NC</h1>
-      <h2 class="hero-subtitle">Transport Moderne en Nouvelle-Calédonie</h2>
-      <p class="hero-description">
-        Découvrez une nouvelle façon de voyager à travers les îles de Nouvelle-Calédonie avec notre système de transport révolutionnaire.
+      <h1 class="hero-title" i18n="main application title">Hyperloop NC</h1>
+      <h2 class="hero-subtitle" i18n="hero subtitle">Modern Transport in New Caledonia</h2>
+      <p class="hero-description" i18n="hero description">
+        Discover a new way to travel across the islands of New Caledonia with our revolutionary transport system.
       </p>
       <div class="hero-actions">
-        <button class="btn btn-primary" (click)="navigateToSearch()">Rechercher un trajet</button>
-        <button class="btn btn-secondary" (click)="navigateToSchedules()">Voir les horaires</button>
+        <button class="btn btn-primary" (click)="navigateToSearch()" i18n="search trip button">Search a trip</button>
+        <button class="btn btn-secondary" (click)="navigateToSchedules()" i18n="view schedules button">View schedules</button>
       </div>
     </div>
   </header>
 
   <section class="features-section">
     <div class="container">
-      <h3>Nos Services</h3>
+      <h3 i18n="services section title">Our Services</h3>
       <div class="features-grid">
         <div class="feature-card" (click)="navigateToSearch()">
           <div class="feature-icon">🚄</div>
-          <h4>Transport Rapide</h4>
-          <p>Voyagez rapidement entre toutes les stations de Nouvelle-Calédonie</p>
+          <h4 i18n="fast transport feature title">Fast Transport</h4>
+          <p i18n="fast transport feature description">Travel quickly between all stations in New Caledonia</p>
         </div>
         <div class="feature-card" (click)="navigateToSchedules()">
           <div class="feature-icon">🕐</div>
-          <h4>Horaires Flexibles</h4>
-          <p>Multiples départs quotidiens vers toutes les destinations</p>
+          <h4 i18n="flexible schedules feature title">Flexible Schedules</h4>
+          <p i18n="flexible schedules feature description">Multiple daily departures to all destinations</p>
         </div>
         <div class="feature-card" (click)="navigateToPrices()">
           <div class="feature-icon">💎</div>
-          <h4>Plusieurs Classes</h4>
-          <p>Choisissez entre 1ère, 2ème et 3ème classe selon vos besoins</p>
+          <h4 i18n="multiple classes feature title">Multiple Classes</h4>
+          <p i18n="multiple classes feature description">Choose between 1st, 2nd and 3rd class according to your needs</p>
         </div>
       </div>
     </div>
@@ -38,19 +38,19 @@
 
   <section class="destinations-section">
     <div class="container">
-      <h3>Destinations Principales</h3>
+      <h3 i18n="main destinations section title">Main Destinations</h3>
       <div class="destinations-grid">
         <div class="destination-card" (click)="navigateToStations()">
-          <h4>Grande-Terre</h4>
-          <p>De Nouméa à Koumac, découvrez toute la Grande-Terre</p>
+          <h4 i18n="grande terre destination title">Grande-Terre</h4>
+          <p i18n="grande terre destination description">From Nouméa to Koumac, discover all of Grande-Terre</p>
         </div>
         <div class="destination-card" (click)="navigateToStations()">
-          <h4>Îles Loyauté</h4>
-          <p>Lifou, Maré, Ouvéa - Les perles du Pacifique</p>
+          <h4 i18n="loyalty islands destination title">Loyalty Islands</h4>
+          <p i18n="loyalty islands destination description">Lifou, Maré, Ouvéa - The pearls of the Pacific</p>
         </div>
         <div class="destination-card" (click)="navigateToStations()">
-          <h4>Île des Pins</h4>
-          <p>L'île la plus proche du paradis</p>
+          <h4 i18n="isle of pines destination title">Isle of Pines</h4>
+          <p i18n="isle of pines destination description">The island closest to paradise</p>
         </div>
       </div>
     </div>

@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="footer.description" datatype="html">
+        <source>Modern and eco-friendly transportation in New Caledonia</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.quick-links" datatype="html">
+        <source>Quick Links</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.home" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">17,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.search" datatype="html">
+        <source>Search</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.schedules" datatype="html">
+        <source>Schedules</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">19,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.prices" datatype="html">
+        <source>Prices</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">20,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.destinations" datatype="html">
+        <source>Destinations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.grande-terre" datatype="html">
+        <source>Grande-Terre</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.loyalty-islands" datatype="html">
+        <source>Loyalty Islands</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.isle-of-pines" datatype="html">
+        <source>Isle of Pines</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.all-stations" datatype="html">
+        <source>All stations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">30,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.contact" datatype="html">
+        <source>Contact</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.location" datatype="html">
+        <source>Nouméa, New Caledonia</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">39,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.copyright" datatype="html">
+        <source>© 2025 Hyperloop NC. All rights reserved.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.legal" datatype="html">
+        <source>Legal notices</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.privacy" datatype="html">
+        <source>Privacy policy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footer.terms" datatype="html">
+        <source>Terms of use</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">50,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="language.code" datatype="html">
+        <source>EN</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/header/header.component.html</context>
+          <context context-type="linenumber">17,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5833278047211542165" datatype="html">
+        <source>Hyperloop NC</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <note priority="1" from="description">main application title</note>
+      </trans-unit>
+      <trans-unit id="7279187063743369099" datatype="html">
+        <source>Modern Transport in New Caledonia</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+        <note priority="1" from="description">hero subtitle</note>
+      </trans-unit>
+      <trans-unit id="479060576837349399" datatype="html">
+        <source> Discover a new way to travel across the islands of New Caledonia with our revolutionary transport system. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+        <note priority="1" from="description">hero description</note>
+      </trans-unit>
+      <trans-unit id="706768281913385402" datatype="html">
+        <source>Search a trip</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+        <note priority="1" from="description">search trip button</note>
+      </trans-unit>
+      <trans-unit id="6124969914356671651" datatype="html">
+        <source>View schedules</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">11,14</context>
+        </context-group>
+        <note priority="1" from="description">view schedules button</note>
+      </trans-unit>
+      <trans-unit id="9063344890262493319" datatype="html">
+        <source>Our Services</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+        <note priority="1" from="description">services section title</note>
+      </trans-unit>
+      <trans-unit id="8039185240328447861" datatype="html">
+        <source>Fast Transport</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+        <note priority="1" from="description">fast transport feature title</note>
+      </trans-unit>
+      <trans-unit id="8346338972528330078" datatype="html">
+        <source>Travel quickly between all stations in New Caledonia</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+        <note priority="1" from="description">fast transport feature description</note>
+      </trans-unit>
+      <trans-unit id="8929967197871245935" datatype="html">
+        <source>Flexible Schedules</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+        <note priority="1" from="description">flexible schedules feature title</note>
+      </trans-unit>
+      <trans-unit id="4362358041080417801" datatype="html">
+        <source>Multiple daily departures to all destinations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+        <note priority="1" from="description">flexible schedules feature description</note>
+      </trans-unit>
+      <trans-unit id="3766553700370191862" datatype="html">
+        <source>Multiple Classes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+        <note priority="1" from="description">multiple classes feature title</note>
+      </trans-unit>
+      <trans-unit id="7173358131626592335" datatype="html">
+        <source>Choose between 1st, 2nd and 3rd class according to your needs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">33,37</context>
+        </context-group>
+        <note priority="1" from="description">multiple classes feature description</note>
+      </trans-unit>
+      <trans-unit id="548428407129599694" datatype="html">
+        <source>Main Destinations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">41,43</context>
+        </context-group>
+        <note priority="1" from="description">main destinations section title</note>
+      </trans-unit>
+      <trans-unit id="7556861399381308255" datatype="html">
+        <source>Grande-Terre</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+        <note priority="1" from="description">grande terre destination title</note>
+      </trans-unit>
+      <trans-unit id="3817188056506347078" datatype="html">
+        <source>From Nouméa to Koumac, discover all of Grande-Terre</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">45,47</context>
+        </context-group>
+        <note priority="1" from="description">grande terre destination description</note>
+      </trans-unit>
+      <trans-unit id="5987256846348779445" datatype="html">
+        <source>Loyalty Islands</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">48,49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">134,135</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+        <note priority="1" from="description">loyalty islands destination title</note>
+      </trans-unit>
+      <trans-unit id="599443245429931893" datatype="html">
+        <source>Lifou, Maré, Ouvéa - The pearls of the Pacific</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">49,51</context>
+        </context-group>
+        <note priority="1" from="description">loyalty islands destination description</note>
+      </trans-unit>
+      <trans-unit id="1795843497229813860" datatype="html">
+        <source>Isle of Pines</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+        <note priority="1" from="description">isle of pines destination title</note>
+      </trans-unit>
+      <trans-unit id="4871634524207337933" datatype="html">
+        <source>The island closest to paradise</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home-page/home-page.component.html</context>
+          <context context-type="linenumber">53,57</context>
+        </context-group>
+        <note priority="1" from="description">isle of pines destination description</note>
+      </trans-unit>
+      <trans-unit id="nav.home" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">6,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.search" datatype="html">
+        <source>Search</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">12,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.schedules" datatype="html">
+        <source>Schedules</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">18,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.prices" datatype="html">
+        <source>Prices</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="nav.stations" datatype="html">
+        <source>Stations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/navigation/navigation.component.html</context>
+          <context context-type="linenumber">30,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1275394173348320684" datatype="html">
+        <source>💰 Transport Fares</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">prices page title</note>
+      </trans-unit>
+      <trans-unit id="6162669832690022058" datatype="html">
+        <source>Check all transport fares between stations in New Caledonia</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">4,8</context>
+        </context-group>
+        <note priority="1" from="description">prices page description</note>
+      </trans-unit>
+      <trans-unit id="prices.loading" datatype="html">
+        <source>Loading fares...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">11,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.service-classes-title" datatype="html">
+        <source>🎭 Service Classes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.service-classes-description" datatype="html">
+        <source>Discover our different transport classes adapted to all budgets</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">19,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.first-class-alt" datatype="html">
+        <source>First Class</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.first-class" datatype="html">
+        <source>First Class</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">199,200</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.premium-badge" datatype="html">
+        <source>Premium</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">30,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.premium-seats" datatype="html">
+        <source>Premium leather seats</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.catering-service" datatype="html">
+        <source>Catering service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.free-wifi" datatype="html">
+        <source>Free Wi-Fi</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">36,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.personal-entertainment" datatype="html">
+        <source>Personal entertainment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.priority-luggage" datatype="html">
+        <source>Priority luggage</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.starting-from" datatype="html">
+        <source>Starting from</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">66,67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.second-class-alt" datatype="html">
+        <source>Second Class</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.second-class" datatype="html">
+        <source>Second Class</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">53,54</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">204,205</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.recommended-badge" datatype="html">
+        <source>Recommended</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">54,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.comfortable-seats" datatype="html">
+        <source>Comfortable seats</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.snacks-available" datatype="html">
+        <source>Snacks available</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">59,60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.air-conditioning" datatype="html">
+        <source>Air conditioning</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.power-outlets" datatype="html">
+        <source>Power outlets</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">61,62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.trip-information" datatype="html">
+        <source>Trip information</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">62,64</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">216,217</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.third-class-alt" datatype="html">
+        <source>Third Class</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">74,75</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.third-class" datatype="html">
+        <source>Third Class</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">77,78</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">209,210</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.economy-badge" datatype="html">
+        <source>Economy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">78,80</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.standard-seats" datatype="html">
+        <source>Standard seats</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">82,83</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.onboard-toilets" datatype="html">
+        <source>Onboard toilets</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">83,84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.voice-announcements" datatype="html">
+        <source>Voice announcements</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">84,85</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.emergency-service" datatype="html">
+        <source>Emergency service</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">85,86</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.luggage-lockers" datatype="html">
+        <source>Luggage lockers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">86,88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.fares-displayed-for" datatype="html">
+        <source>Fares displayed for:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">99,101</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8668564783833506885" datatype="html">
+        <source>First Class</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">101,102</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">181,182</context>
+        </context-group>
+        <note priority="1" from="description">prices service first-class</note>
+      </trans-unit>
+      <trans-unit id="1265726900329982388" datatype="html">
+        <source>Second Class</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">102,103</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">182,183</context>
+        </context-group>
+        <note priority="1" from="description">prices service second-class</note>
+      </trans-unit>
+      <trans-unit id="9038316845511059808" datatype="html">
+        <source>Third Class</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">103,106</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">183,185</context>
+        </context-group>
+        <note priority="1" from="description">prices service third-class</note>
+      </trans-unit>
+      <trans-unit id="prices.filter-by-location" datatype="html">
+        <source>📍 Filter by geographical area</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">112,113</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.select-location-description" datatype="html">
+        <source>Select a geographical area of New Caledonia</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">113,116</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3193521475359692581" datatype="html">
+        <source>Main Island</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">124,125</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+        <note priority="1" from="description">prices tab main-island</note>
+      </trans-unit>
+      <trans-unit id="1393215086905241964" datatype="html">
+        <source>Pine Island</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">144,145</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+        <note priority="1" from="description">prices tab pine-island</note>
+      </trans-unit>
+      <trans-unit id="prices.fares-by-class" datatype="html">
+        <source>💰 Fares by class:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">195,196</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.distance" datatype="html">
+        <source>Distance:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">219,220</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.price-per-km" datatype="html">
+        <source>Price per km (2nd class):</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">223,224</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.islands-served" datatype="html">
+        <source>🏝️ Islands served:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">230,231</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.no-fares-found" datatype="html">
+        <source>No fare found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">244,245</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="prices.no-fares-message" datatype="html">
+        <source>No fare is available for the area <x id="INTERPOLATION" equiv-text="{{ getLocationTabLabel(activeLocationTab) }}"/> in <x id="INTERPOLATION_1" equiv-text="{{ getServiceClassLabel(activeTab) }}"/>.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/prices/prices.component.html</context>
+          <context context-type="linenumber">245,247</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4740805699365171466" datatype="html">
+        <source>🕐 Train Schedules</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">schedules page title</note>
+      </trans-unit>
+      <trans-unit id="4509885784305371992" datatype="html">
+        <source>Check all departure and arrival times to plan your trip in New Caledonia</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">4,8</context>
+        </context-group>
+        <note priority="1" from="description">schedules page description</note>
+      </trans-unit>
+      <trans-unit id="schedules.loading" datatype="html">
+        <source>Loading schedules...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">10,13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="schedules.tab-south" datatype="html">
+        <source>To the South</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">22,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="schedules.tab-north" datatype="html">
+        <source>To the North</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="schedules.tab-islands" datatype="html">
+        <source>To the Islands</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">42,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="schedules.station" datatype="html">
+        <source>Station</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">79,80</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">159,160</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">239,240</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="schedules.schedule" datatype="html">
+        <source>Schedule</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">80,82</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">160,162</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">240,242</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="schedules.no-south-title" datatype="html">
+        <source>No schedule to the South</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">123,124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="schedules.no-south-message" datatype="html">
+        <source>No train goes to the South.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">124,127</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="schedules.no-north-title" datatype="html">
+        <source>No schedule to the North</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">203,204</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="schedules.no-north-message" datatype="html">
+        <source>No train goes to the North.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">204,207</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="schedules.no-islands-title" datatype="html">
+        <source>No schedule to the Islands</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">283,284</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="schedules.no-islands-message" datatype="html">
+        <source>No train goes to the islands.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/schedules/schedules.component.html</context>
+          <context context-type="linenumber">284,287</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6318940007758870761" datatype="html">
+        <source>🔍 Trip Search</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">search page title</note>
+      </trans-unit>
+      <trans-unit id="6534157207437784912" datatype="html">
+        <source>Find the perfect trip for your journey in New Caledonia</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">4,7</context>
+        </context-group>
+        <note priority="1" from="description">search page description</note>
+      </trans-unit>
+      <trans-unit id="6784704580816327304" datatype="html">
+        <source>🎯 Your search criteria</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">11,12</context>
+        </context-group>
+        <note priority="1" from="description">search criteria title</note>
+      </trans-unit>
+      <trans-unit id="2000320842630608064" datatype="html">
+        <source>Select your trip and preferences</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">12,15</context>
+        </context-group>
+        <note priority="1" from="description">search criteria description</note>
+      </trans-unit>
+      <trans-unit id="search.departure-station" datatype="html">
+        <source>Departure station</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.choose-departure" datatype="html">
+        <source>Choose a departure station</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.swap-stations" datatype="html">
+        <source>Swap stations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">46,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.arrival-station" datatype="html">
+        <source>Arrival station</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">55,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.choose-arrival" datatype="html">
+        <source>Choose an arrival station</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">63,65</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.departure-date" datatype="html">
+        <source>Departure date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">80,82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.service-class" datatype="html">
+        <source>Service class</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">94,96</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.time-preference" datatype="html">
+        <source>Time preference</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">113,115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.reset" datatype="html">
+        <source>Reset</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">138,139</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.searching" datatype="html">
+        <source>Searching...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">148,149</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.search" datatype="html">
+        <source>Search</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">149,151</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.results-title" datatype="html">
+        <source>📋 Search results</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">159,160</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.results-count" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ searchResults.length }}"/> trip(s) found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">161,162</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.no-results-title" datatype="html">
+        <source>No trip found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">232,233</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.no-results-message" datatype="html">
+        <source>No trip matches your search criteria.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">233,235</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.suggestions-title" datatype="html">
+        <source>Suggestions:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">235,237</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.suggestion-1" datatype="html">
+        <source>Check the selected stations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">237,238</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.suggestion-2" datatype="html">
+        <source>Try another service class</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">238,239</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.suggestion-3" datatype="html">
+        <source>Change your time preferences</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">239,242</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.welcome-title" datatype="html">
+        <source>Ready to travel?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">248,249</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.welcome-message" datatype="html">
+        <source>Select your departure and arrival stations to start your trip search.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">249,251</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.feature-fast" datatype="html">
+        <source>Fast search</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">253,255</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.feature-classes" datatype="html">
+        <source>All classes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">257,259</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="search.feature-flexible" datatype="html">
+        <source>Flexible schedules</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/search/search.component.html</context>
+          <context context-type="linenumber">261,264</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5790142794847922032" datatype="html">
+        <source>🚉 Transport Stations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+        <note priority="1" from="description">stations page title</note>
+      </trans-unit>
+      <trans-unit id="4819385260464036755" datatype="html">
+        <source>Discover all the stations in the New Caledonia transport network with their lines and connections</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">4,8</context>
+        </context-group>
+        <note priority="1" from="description">stations page description</note>
+      </trans-unit>
+      <trans-unit id="2052390668965982827" datatype="html">
+        <source>Loading stations...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">11,15</context>
+        </context-group>
+        <note priority="1" from="description">stations loading message</note>
+      </trans-unit>
+      <trans-unit id="5724363929304709833" datatype="html">
+        <source>lines</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">70,72</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">124,126</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">178,180</context>
+        </context-group>
+        <note priority="1" from="description">stations lines label</note>
+      </trans-unit>
+      <trans-unit id="682634487325562037" datatype="html">
+        <source>🚇 Lines served:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">78,79</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">132,133</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">186,187</context>
+        </context-group>
+        <note priority="1" from="description">stations lines served title</note>
+      </trans-unit>
+      <trans-unit id="729612210629402784" datatype="html">
+        <source>📍 Coordinates:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">90,91</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">144,145</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">198,199</context>
+        </context-group>
+        <note priority="1" from="description">stations coordinates title</note>
+      </trans-unit>
+      <trans-unit id="3785334716774298719" datatype="html">
+        <source>No stations found</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">100,101</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">154,155</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">208,209</context>
+        </context-group>
+        <note priority="1" from="description">stations no stations found title</note>
+      </trans-unit>
+      <trans-unit id="4450052242935960240" datatype="html">
+        <source>No stations are available for this region.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">101,105</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">155,159</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/stations/stations.component.html</context>
+          <context context-type="linenumber">209,213</context>
+        </context-group>
+        <note priority="1" from="description">stations no stations found message</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

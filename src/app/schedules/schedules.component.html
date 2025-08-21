@@ -1,13 +1,13 @@
 <div class="schedules-container">
   <div class="schedules-header">
-    <h1 class="display-4">🕐 Horaires des Trains</h1>
-    <p class="lead">Consultez tous les horaires de départ et d'arrivée pour planifier votre voyage en Nouvelle-Calédonie</p>
+    <h1 class="display-4" i18n="schedules page title">🕐 Train Schedules</h1>
+    <p class="lead" i18n="schedules page description">Check all departure and arrival times to plan your trip in New Caledonia</p>
   </div>
 
   <!-- Loading -->
   <div *ngIf="loading" class="loading-container">
     <div class="loading-spinner">🚄</div>
-    <p>Chargement des horaires...</p>
+    <p i18n="@@schedules.loading">Loading schedules...</p>
   </div>
 
   <!-- Onglets -->
@@ -19,7 +19,7 @@
         (click)="switchTab('south')"
       >
         <span class="tab-icon">⬇️</span>
-        <span class="tab-label">Vers le Sud</span>
+        <span class="tab-label" i18n="@@schedules.tab-south">To the South</span>
         <span class="tab-count">({{ schedulesByDirection.south.length }})</span>
       </button>
       
@@ -29,7 +29,7 @@
         (click)="switchTab('north')"
       >
         <span class="tab-icon">⬆️</span>
-        <span class="tab-label">Vers le Nord</span>
+        <span class="tab-label" i18n="@@schedules.tab-north">To the North</span>
         <span class="tab-count">({{ schedulesByDirection.north.length }})</span>
       </button>
       
@@ -39,7 +39,7 @@
         (click)="switchTab('islands')"
       >
         <span class="tab-icon">🏝️</span>
-        <span class="tab-label">Vers les Îles</span>
+        <span class="tab-label" i18n="@@schedules.tab-islands">To the Islands</span>
         <span class="tab-count">({{ schedulesByDirection.islands.length }})</span>
       </button>
     </div>
@@ -76,8 +76,8 @@
               [class.hidden]="!isExpanded(scheduleDisplay.schedule.trip_id)"
             >
               <div class="timeline-header">
-                <span>Station</span>
-                <span>Horaire</span>
+                <span i18n="@@schedules.station">Station</span>
+                <span i18n="@@schedules.schedule">Schedule</span>
               </div>
               
               <div class="timeline-content">
@@ -120,8 +120,8 @@
           <!-- Message si aucun résultat pour Sud -->
           <div *ngIf="schedulesByDirection.south.length === 0" class="no-results">
             <div class="no-results-icon">⬇️</div>
-            <h3>Aucun horaire vers le Sud</h3>
-            <p>Aucun train ne va vers le Sud.</p>
+            <h3 i18n="@@schedules.no-south-title">No schedule to the South</h3>
+            <p i18n="@@schedules.no-south-message">No train goes to the South.</p>
           </div>
         </div>
       </div>
@@ -156,8 +156,8 @@
               [class.hidden]="!isExpanded(scheduleDisplay.schedule.trip_id)"
             >
               <div class="timeline-header">
-                <span>Station</span>
-                <span>Horaire</span>
+                <span i18n="@@schedules.station">Station</span>
+                <span i18n="@@schedules.schedule">Schedule</span>
               </div>
               
               <div class="timeline-content">
@@ -200,8 +200,8 @@
           <!-- Message si aucun résultat pour Nord -->
           <div *ngIf="schedulesByDirection.north.length === 0" class="no-results">
             <div class="no-results-icon">⬆️</div>
-            <h3>Aucun horaire vers le Nord</h3>
-            <p>Aucun train ne va vers le Nord.</p>
+            <h3 i18n="@@schedules.no-north-title">No schedule to the North</h3>
+            <p i18n="@@schedules.no-north-message">No train goes to the North.</p>
           </div>
         </div>
       </div>
@@ -236,8 +236,8 @@
               [class.hidden]="!isExpanded(scheduleDisplay.schedule.trip_id)"
             >
               <div class="timeline-header">
-                <span>Station</span>
-                <span>Horaire</span>
+                <span i18n="@@schedules.station">Station</span>
+                <span i18n="@@schedules.schedule">Schedule</span>
               </div>
               
               <div class="timeline-content">
@@ -280,8 +280,8 @@
           <!-- Message si aucun résultat pour Îles -->
           <div *ngIf="schedulesByDirection.islands.length === 0" class="no-results">
             <div class="no-results-icon">🏝️</div>
-            <h3>Aucun horaire vers les Îles</h3>
-            <p>Aucun train ne va vers les îles.</p>
+            <h3 i18n="@@schedules.no-islands-title">No schedule to the Islands</h3>
+            <p i18n="@@schedules.no-islands-message">No train goes to the islands.</p>
           </div>
         </div>
       </div>
