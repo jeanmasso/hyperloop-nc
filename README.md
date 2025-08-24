@@ -74,17 +74,20 @@ src/
 │   │   ├── data.service.ts  # Gestion des données
 │   │   ├── search.service.ts # Logique de recherche
 │   │   └── utils.service.ts # Utilitaires
-│   ├── models/              # Modèles TypeScript
-│   └── assets/              # Ressources statiques
+│   └── models/              # Modèles TypeScript
 ├── locale/                  # Fichiers de traduction i18n
 │   ├── messages.fr.xlf      # Traductions françaises
 │   └── messages.es.xlf      # Traductions espagnoles
 └── public/
-    └── data/                # Données JSON
-        ├── stations.json    # Stations du réseau
-        ├── lines.json       # Lignes de transport
-        ├── schedules.json   # Horaires
-        └── prices.json      # Grille tarifaire
+    ├── data/                # Données JSON
+    │   ├── stations.json    # Stations du réseau
+    │   ├── lines.json       # Lignes de transport
+    │   ├── schedules.json   # Horaires
+    │   └── prices.json      # Grille tarifaire
+    └── images/              # Images statiques
+        ├── first-class.png  # Image première classe
+        ├── second-class.png # Image deuxième classe
+        └── third-class.png  # Image troisième classe
 ```
 
 ## 🚀 Installation et Lancement
